@@ -2672,16 +2672,7 @@ stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass
           propertieValues: [ {"name": "Home", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/icons%2Ficons.png?alt=media&token=fee369a4-e148-45f7-9c27-fe70b66a06a8"},{"name": "Compras","image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/icons%2Ficons-1.png?alt=media&token=3ec27bf0-b38f-4733-8f7b-403ba22e9c30"},{"name": "Meu Perfil","image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/icons%2Ficons-2.png?alt=media&token=10a18172-cf2e-4ebc-8f25-fe2a31ef5e81"},{"name": "Sair","image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/icons%2Ficons-4.png?alt=media&token=c0276b6d-6e95-4637-888b-fe0e912a200a"} ]
         }}), 
         'lists': jsvals.j8({pass: {
-          propertieValues: { 
-        'Rações': jsvals.j8({pass: {
-          propertieValues: [ {"name": "Ração Golden Gatos Adultos Carne", "price":"18,90", "amount":"0", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/prods%2Fracao-golden-gatos-castrados-carne-3823767-1kg-Frente.webp?alt=media&token=9a657bbd-58dd-40e5-be8c-af486231abc8"},{"name": "Ração Úmida Friskies Gatos Adultos Carne ao Molho", "price":"3,79", "amount":"0", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/prods%2Fracao-umida-friskies-gatos-adultos-carne-ao-molho.png?alt=media&token=a6eeab6e-2b91-4ee0-9e6a-f71492016f07"} ]
-        }}), 
-        'Higiene e Perfumaria': jsvals.j8({pass: {
-          propertieValues: [ {"name": "Amaciante Concentrado Comfort Frescor Intenso 900 ml", "price":"10,60", "amount":"0",  "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/prods%2Fsabao-liquido-omo-lavagem-perfeita-3l-1.webp?alt=media&token=fd68273c-cd77-4568-8b0f-7ef36048eb1b"},{"name": "Água Sanitária 2 Litros", "price":"4,30", "amount":"0", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/prods%2Fagua-sanitaria-carrefour-2-litros-1.webp?alt=media&token=9da6fa93-6d5f-420f-b29d-802a11980f81"} ]
-        }}), 
-        'Refrigerantes': jsvals.j8({pass: {
-          propertieValues: [ {"name": "Coca-Cola Pet 600 ml", "price":"5,99", "amount":"0", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/prods%2Fcoca-cola-600ml-1.webp?alt=media&token=94f0b716-e56e-4fec-8ea4-5895593d9ea6"},{"name": "Kit 1 Coca-Cola Original + 1 Fanta Guaraná 2L", "price":"14,80", "amount":"0", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/prods%2F6534465_1.webp?alt=media&token=a6940c81-ddc8-4617-9348-49c06b841706"} ]
-        }}), 'prods': jsvals.j8({pass: {
+          propertieValues: { 'prods': jsvals.j8({pass: {
           propertieValues: [ 
         jsvals.j8({pass: {
           propertieValues: {
