@@ -19,27 +19,19 @@
           import { tools } from './tools';
 
           // ---------- set Caps Inputs
-          const currRoute = 'sc1';
+          const currRoute = 'a2';
 
           let args: any = [];
 
           const screens = [
             
         
-        
-        () => <>{/*styles library*/}</>, 
-        
-        
-        () => <>{/*elements library*/}</>, 
-        
-        
-        () => <>{/*functions library*/}</>, 
-        
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"sc2",
+          pathScreen:"a0",
 
           styles:[
+        
 stls.backgroundColor({ pass: { arrayValue: [jsvals.varReader({pass: {
           path: jsvals.j8({pass: {
           propertieValues: "all.colors.primaryColor"
@@ -53,6 +45,9 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           path: jsvals.j8({pass: {
           propertieValues: "all.sizes.percent.100"
         }})
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
         }})] }})],
 
           screenElements:[
@@ -60,22 +55,42 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           elementProperties: [{}],
 
           styles: [
-              {
-                backgroundColor: 'blue',
-                borderRadius: 20,
-                paddingVertical: 5,
-                paddingHorizontal: 20,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }
-              ],
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100px"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "26px"
+        }})] }}), 
+stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "#000"
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
 
-          childrenItems: [()=><></>],
+          childrenItems: [(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            {}
+          ],
+
+          arrStyles: [
+            stls.color({ pass: { arrayValue: ["white"] }})
+          ],
+
+          children: [
+            jsvals.j8({pass: {
+          propertieValues: "Ir p/ Produtos"
+        }})
+          ],
+
+          args,
+
+        }}/>],
 
           pressableFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("sc1");
+          return tools.goTo("a1");
         }
         ],
 
@@ -84,15 +99,18 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           elementProperties: [{}],
 
           styles: [
-              {
-                backgroundColor: 'blue',
-                borderRadius: 20,
-                paddingVertical: 5,
-                paddingHorizontal: 20,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }
-              ],
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100px"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "26px"
+        }})] }}), 
+stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "#000"
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
 
           childrenItems: [(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -100,12 +118,12 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            stls.color({ pass: { arrayValue: ["white"] }})
           ],
 
           children: [
             jsvals.j8({pass: {
-          propertieValues: "where"
+          propertieValues: "Clique Aqui"
         }})
           ],
 
@@ -113,30 +131,7 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
 
         }}/>],
 
-          pressableFunctions: [async (...args) =>
-        functions.firebase.where({ args, pass:{
-            fbInit: [jsvals.varReader({pass: {
-          path: jsvals.j8({pass: {
-          propertieValues: "all.fbInit"
-        }})
-        }})],
-            arrRefStrings: [jsvals.j8({pass: {
-          propertieValues: "users"
-        }})],
-            arrWhere: [(...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        jsvals.j8({pass: {
-          propertieValues: "userEmail"
-        }}), 
-        jsvals.j8({pass: {
-          propertieValues: "=="
-        }}), jsvals.j8({pass: {
-          propertieValues: "sdd"
-        }})],
-        }})],
-            arrFuncs: [() => {}],
-        }})],
+          pressableFunctions: [()=>console.log("Você Clicou!")],
 
           args,
         }}/>],
@@ -167,7 +162,7 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
         
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"sc1",
+          pathScreen:"a1",
 
           styles:[
         
@@ -381,16 +376,14 @@ stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass
       elementsProperties:[{}],
 
       styles:[
-stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
-          path: jsvals.j8({pass: {
-          propertieValues: "all.sizes.fixed.30"
-        }})
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "14px"
         }})] }}), stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
-          propertieValues: "70px"
+          propertieValues: "114px"
         }})] }})],
 
       URIvariablePath:[jsvals.j8({pass: {
-          propertieValues: "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/logo_poupi.png?alt=media&token=86a41293-886c-4d0c-bf9c-b2d515f26edd"
+          propertieValues: "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/FlaxFood.png?alt=media&token=e3312165-1cea-4f13-a0a9-5b431b59b464"
         }})],
 
       args,
@@ -1501,7 +1494,7 @@ stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass
           pressableFunctions: [
         (...args) => {
           // ---------- get Function from A_Project Scope
-          return tools.goTo("sc2");
+          return tools.goTo("a0");
         }
         ],
 
@@ -1997,13 +1990,12 @@ stls.width({ pass: { arrayValue: [jsvals.varReader({pass: {
         }}/>, 
 
         (...args: any) => <Elements.Screen3 pass={{
-          pathScreen:"sc3",
+          pathScreen:"a2",
 
           styles:[
-stls.backgroundColor({ pass: { arrayValue: [jsvals.varReader({pass: {
-          path: jsvals.j8({pass: {
-          propertieValues: "all.colors.primaryColor"
-        }})
+        
+stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "#fff"
         }})] }}), 
 stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           path: jsvals.j8({pass: {
@@ -2013,48 +2005,109 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           path: jsvals.j8({pass: {
           propertieValues: "all.sizes.percent.100"
         }})
+        }})] }}), stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "#eee"
         }})] }})],
 
           screenElements:[
-        (...args:any) => <Elements.Pressable3 pass={{
-          elementProperties: [{}],
+        
 
-          styles: [
-              {
-                backgroundColor: 'blue',
-                borderRadius: 20,
-                paddingVertical: 5,
-                paddingHorizontal: 20,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }
-              ],
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
 
-          childrenItems: [()=><></>],
+            styles:[
+stls.flexDirection({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "row"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100%"
+        }})] }}), stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "green"
+        }})] }})],
 
-          pressableFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("sc1");
-        }
-        ],
+            variablePath:[ ],
 
-          args,
-        }}/>, (...args:any) => <Elements.Pressable3 pass={{
-          elementProperties: [{}],
+            expectedVal:[ ],
 
-          styles: [
-              {
-                backgroundColor: 'blue',
-                borderRadius: 20,
-                paddingVertical: 5,
-                paddingHorizontal: 20,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }
-              ],
+            childrenItems:[
+        
 
-          childrenItems: [(...args:any) => <Elements.Text pass={{
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (  <Svg
+xmlns="http://www.w3.org/2000/svg"
+    width={11}
+    height={18}
+    viewBox="0 0 11 18"
+    {...props}
+  >
+    <Path
+{...props}
+      fillRule="evenodd"
+      d="M10.06.94a1.5 1.5 0 0 1 0 2.12L4.122 9l5.94 5.94a1.5 1.5 0 0 1-2.122 2.12l-7-7a1.5 1.5 0 0 1 0-2.12l7-7a1.5 1.5 0 0 1 2.122 0Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "16px",
+
+      largura: "16px",
+
+      preenchimento: [jsvals.j8({pass: {
+          propertieValues: "#fff"
+        }})],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+        stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100%"
+        }})] }})],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
           arrProps: [
             {}
           ],
@@ -2064,63 +2117,320 @@ stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
           ],
 
           children: [
-            jsvals.j8({pass: {
-          propertieValues: "where"
-        }})
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            {}
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
           ],
 
           args,
 
         }}/>],
 
-          pressableFunctions: [async (...args) =>
-        functions.firebase.where({ args, pass:{
-            fbInit: [jsvals.varReader({pass: {
-          path: jsvals.j8({pass: {
-          propertieValues: "all.fbInit"
-        }})
-        }})],
-            arrRefStrings: [jsvals.j8({pass: {
-          propertieValues: "users"
-        }})],
-            arrWhere: [(...args) =>
-        functions.firebase.whereConds({ args, pass:{
-          arrStrings: [
-        jsvals.j8({pass: {
-          propertieValues: "userEmail"
-        }}), 
-        jsvals.j8({pass: {
-          propertieValues: "=="
-        }}), jsvals.j8({pass: {
-          propertieValues: "sdd"
-        }})],
-        }})],
-            arrFuncs: [() => {}],
-        }})],
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        , 
+        (...args:any) => <Elements.ScrollBar pass={{
+            styles: [],
+            arrProps: [],
+            arrItems: [(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            {}
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
 
           args,
+
+        }}/>],
+            args,
+        }}/>, 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+
+stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "#fff"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
+          path: jsvals.j8({pass: {
+          propertieValues: "all.sizes.percent.100"
+        }})
+        }})] }}), stls.width({ pass: { arrayValue: [jsvals.varReader({pass: {
+          path: jsvals.j8({pass: {
+          propertieValues: "all.sizes.percent.100"
+        }})
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100px"
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[(...args:any) => <Elements.SvgView1 pass={{
+      componentSvg: (Svg:any, SvgObj:any) => {
+        const { Defs, Stop, Path, LinearGradient, G, Circle, Rect, Mask } = SvgObj;
+        return (props:any) => (  <Svg
+xmlns="http://www.w3.org/2000/svg"
+    width={49}
+    height={43}
+    viewBox="0 0 49 43"
+    {...props}
+  >
+    <Path
+       {...props}
+      fillRule="evenodd"
+      d="M43.986 36.75 25.366 4.5a1 1 0 0 0-1.732 0L5.014 36.75a1 1 0 0 0 .866 1.5h37.24a1 1 0 0 0 .866-1.5ZM28.83 2.5c-1.924-3.333-6.736-3.333-8.66 0L1.55 34.75c-1.924 3.333.481 7.5 4.33 7.5h37.24c3.849 0 6.254-4.167 4.33-7.5L28.83 2.5Z"
+      clipRule="evenodd"
+    />
+    <Path
+       {...props}
+      fillRule="evenodd"
+      d="M25 15a2 2 0 0 1 2 2v8.5a2 2 0 1 1-4 0V17a2 2 0 0 1 2-2Zm0 15.5a2 2 0 0 1 2 2v.1a2 2 0 1 1-4 0v-.1a2 2 0 0 1 2-2Z"
+      clipRule="evenodd"
+    />
+  </Svg>)
+      },
+
+      svgOriginal: `
+        <svg></svg>
+      `,
+
+      altura: "14px",
+
+      largura: "14px",
+
+      preenchimento: [jsvals.j8({pass: {
+          propertieValues: "#000"
+        }})],
+
+      args,
+    }}/>],
+
+            args,
+          }}/>
+        , (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            {}
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
         }}/>],
 
-          startFunctions:[async (...args) =>
-        functions.firebase.fireInit({ args, pass:{
-          fbConfig: jsvals.varReader({pass: {
-          path: jsvals.j8({pass: {
-          propertieValues: "all.fbConfig"
-        }})
-        }}),
-          arrFuncs: [async (...args) =>
-        functions.setVar({ args, pass:{
-          keyPath: [jsvals.j8({pass: {
-          propertieValues: "all.fbInit"
-        }})],
-          value: jsvals.argReader({pass: {
-          argPath: jsvals.j8({pass: {
-          propertieValues: "#0"
-        }}),
-          args
-        }})
-        }})]
-        }})],
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+stls.flexDirection({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "row"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100%"
+        }})] }}), stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "#333"
+        }})] }})],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+        
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+        stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100%"
+        }})] }})],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[
+        (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            {}
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>, (...args:any) => <Elements.Text pass={{
+          arrProps: [
+            {}
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            "Escreva..."
+          ],
+
+          args,
+
+        }}/>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "40px"
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
+
+            variablePath:[ ],
+
+            expectedVal:[ ],
+
+            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
+
+            args,
+          }}/>
+        ],
+
+          startFunctions:[()=>{}],
 
           args,
         }}/>
