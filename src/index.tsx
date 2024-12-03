@@ -19,7 +19,7 @@
           import { tools } from './tools';
 
           // ---------- set Caps Inputs
-          const currRoute = 'a2';
+          const currRoute = 'home';
 
           let args: any = [];
 
@@ -1988,6 +1988,7 @@ stls.width({ pass: { arrayValue: [jsvals.varReader({pass: {
 
           args,
         }}/>, 
+        
 
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"a2",
@@ -2429,6 +2430,47 @@ stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass
             args,
           }}/>
         ],
+
+          startFunctions:[()=>{}],
+
+          args,
+        }}/>, 
+
+        (...args: any) => <Elements.Screen3 pass={{
+          pathScreen:"home",
+
+          styles:[
+        
+stls.backgroundColor({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "#fff"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.varReader({pass: {
+          path: jsvals.j8({pass: {
+          propertieValues: "all.sizes.percent.100"
+        }})
+        }})] }}), stls.width({ pass: { arrayValue: [jsvals.varReader({pass: {
+          path: jsvals.j8({pass: {
+          propertieValues: "all.sizes.percent.100"
+        }})
+        }})] }}), 
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }})],
+
+          screenElements:[() => {
+                  const textStyle = {
+                    fontSize: 20,
+                    color: '#fff2',
+                    textAlign:'center',
+                    maxWidth: 200,
+                    // maxWidth: '200px'<= #ATTENTION: Native ERROR! No string!
+                  };
+
+                  return (
+                    <RN.Text style={textStyle}>
+                      {'Adicione Elementos nessa tela!'}
+                    </RN.Text>);
+                }],
 
           startFunctions:[()=>{}],
 
