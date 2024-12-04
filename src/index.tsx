@@ -2768,7 +2768,9 @@ stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
         }}/>, (...args:any) => <Elements.Pressable3 pass={{
           elementProperties: [{}],
 
-          styles: [[]],
+          styles: [stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "100%"
+        }})] }})],
 
           childrenItems: [(...args:any) => <Elements.Text pass={{
           arrProps: [
