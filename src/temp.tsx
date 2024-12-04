@@ -115,7 +115,7 @@
         }})}
         }}) ]
         }}), 
-        'prods': jsvals.j8({pass: {
+        'list1': jsvals.j8({pass: {
           propertieValues: [ 
         jsvals.j8({pass: {
           propertieValues: {
@@ -238,7 +238,7 @@
         }}), 
         'Refrigerantes': jsvals.j8({pass: {
           propertieValues: [ {"name": "Coca-Cola Pet 600 ml", "price":"5,99", "amount":"0", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/prods%2Fcoca-cola-600ml-1.webp?alt=media&token=94f0b716-e56e-4fec-8ea4-5895593d9ea6"},{"name": "Kit 1 Coca-Cola Original + 1 Fanta Guaraná 2L", "price":"14,80", "amount":"0", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/prods%2F6534465_1.webp?alt=media&token=a6940c81-ddc8-4617-9348-49c06b841706"} ]
-        }}), 'prods': jsvals.j8({pass: {
+        }}), 'list1': jsvals.j8({pass: {
           propertieValues: [ 
         jsvals.j8({pass: {
           propertieValues: {

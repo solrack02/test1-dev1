@@ -2513,7 +2513,7 @@ stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass
         jsvals.j8({pass: {
           propertieValues: "all.lists."
         }}), jsvals.j8({pass: {
-          propertieValues: "prods"
+          propertieValues: "list1"
         }})],
           joinSeparator: ""
         }}),
@@ -2852,7 +2852,7 @@ stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
         }})}
         }}) ]
         }}), 
-        'prods': jsvals.j8({pass: {
+        'list1': jsvals.j8({pass: {
           propertieValues: [ 
         jsvals.j8({pass: {
           propertieValues: {
@@ -2966,7 +2966,7 @@ stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
           propertieValues: [ {"name": "Home", "image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/icons%2Ficons.png?alt=media&token=fee369a4-e148-45f7-9c27-fe70b66a06a8"},{"name": "Compras","image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/icons%2Ficons-1.png?alt=media&token=3ec27bf0-b38f-4733-8f7b-403ba22e9c30"},{"name": "Meu Perfil","image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/icons%2Ficons-2.png?alt=media&token=10a18172-cf2e-4ebc-8f25-fe2a31ef5e81"},{"name": "Sair","image": "https://firebasestorage.googleapis.com/v0/b/flaxboll.appspot.com/o/icons%2Ficons-4.png?alt=media&token=c0276b6d-6e95-4637-888b-fe0e912a200a"} ]
         }}), 
         'lists': jsvals.j8({pass: {
-          propertieValues: { 'prods': jsvals.j8({pass: {
+          propertieValues: { 'list1': jsvals.j8({pass: {
           propertieValues: [ 
         jsvals.j8({pass: {
           propertieValues: {
