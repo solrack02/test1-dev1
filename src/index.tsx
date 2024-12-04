@@ -2457,7 +2457,8 @@ stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass
           propertieValues: "center"
         }})] }})],
 
-          screenElements:[(...args:any) => <Elements.FlatList2 pass={{
+          screenElements:[
+        (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
             
         (...args:any) => props.ListHeaderComponent({pass: {
@@ -2762,6 +2763,33 @@ stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
           }}/>
         
           ],
+
+          args,
+        }}/>, (...args:any) => <Elements.Pressable3 pass={{
+          elementProperties: [{}],
+
+          styles: [[]],
+
+          childrenItems: [(...args:any) => <Elements.Text pass={{
+          arrProps: [
+            {}
+          ],
+
+          arrStyles: [
+            { color: 'black', fontSize: 12, }
+          ],
+
+          children: [
+            jsvals.j8({pass: {
+          propertieValues: ""
+        }})
+          ],
+
+          args,
+
+        }}/>],
+
+          pressableFunctions: [()=>console.log("Você Clicou!")],
 
           args,
         }}/>],
