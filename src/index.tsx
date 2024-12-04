@@ -2768,8 +2768,20 @@ stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
         }}/>, (...args:any) => <Elements.Pressable3 pass={{
           elementProperties: [{}],
 
-          styles: [stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
+          styles: [
+stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
           propertieValues: "100%"
+        }})] }}), 
+stls.height({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "26px"
+        }})] }}), 
+
+stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass: { arrayValue: [jsvals.j8({pass: {
+          propertieValues: "center"
+        }})] }}), stls.backgroundColor({ pass: { arrayValue: [jsvals.varReader({pass: {
+          path: jsvals.j8({pass: {
+          propertieValues: "all.colors.primaryColor"
+        }})
         }})] }})],
 
           childrenItems: [(...args:any) => <Elements.Text pass={{
