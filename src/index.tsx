@@ -2803,7 +2803,12 @@ stls.justifyContent({ pass: { arrayValue: ['center'] }}), stls.alignItems({ pass
 
         }}/>],
 
-          pressableFunctions: [()=>console.log("Você Clicou!")],
+          pressableFunctions: [
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("home");
+        }
+        ],
 
           args,
         }}/>],
