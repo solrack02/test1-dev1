@@ -2781,7 +2781,7 @@ stls.width({ pass: { arrayValue: [jsvals.j8({pass: {
 
           children: [
             jsvals.j8({pass: {
-          propertieValues: ""
+          propertieValues: "Ir p/"
         }})
           ],
 
