@@ -49,18 +49,15 @@ function Screen3Render({ pass }: Tprops) {
     setTypeFunc(trigger);
     setPressFuncs(arrFunctions);
 
-    console.log('ON INIT >>>>>');
-    // if (trigger === 'on init') {
-    //   for (const currFunc of arrFunctions) await currFunc();
-    // }
+    if (trigger === 'on init') {
+      console.log('ON INIT >>>>>');
+      for (const currFunc of arrFunctions) await currFunc();
+    }
   };
 
   useEffect(() => {
     callFn();
-    console.log('dentro EFFECT', sttTypeFunc, sttPressFuncs);
   }, []);
-
-  console.log('FORA EFFECT', sttTypeFunc, sttPressFuncs);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
@@ -68,14 +65,13 @@ function Screen3Render({ pass }: Tprops) {
   // ---------- set Render
   if (!sttTypeFunc) return null;
 
+  const onPressFunc = async () => {
+    console.log('Clicou', sttPressFuncs);
+    for (const currFunc of sttPressFuncs) await currFunc();
+  };
+
   return sttTypeFunc === 'on press' ? (
-    <Pressable
-      style={stl}
-      onPress={async () => {
-        console.log('Clicou', sttPressFuncs);
-        for (const currFunc of sttPressFuncs) await currFunc();
-      }}
-    >
+    <Pressable style={stl} onPress={onPressFunc}>
       {mapElements(screenElements, args)}
     </Pressable>
   ) : (
