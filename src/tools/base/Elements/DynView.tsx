@@ -37,42 +37,5 @@ export const processFunctions = async (arr: any[]) => {
 export const DynView = (props: Tprops) => {
   console.log('BOX', { props });
 
-  const [sttTypeFunc, setTypeFunc] = useState('');
-  const [sttPressFuncs, setPressFuncs] = useState<
-    Array<(args: any) => Promise<void>>
-  >([]);
-
-  // ---------- set Props
-  const { elementsProperties, styles, functions } = props.pass;
-  const { childrenItems, args } = props.pass;
-
-  const callFn = async () => {
-    const { trigger, arrFunctions } = await processFunctions(functions);
-    setTypeFunc(trigger);
-    setPressFuncs(arrFunctions);
-
-    // ------- set Init Functions (Capsules)
-    if (trigger === 'on init') {
-      for (const currFunc of arrFunctions) await currFunc(args);
-    }
-  };
-
-  useEffect(() => {
-    callFn();
-  }, []);
-
-  // ---------- set Variables Styles (If Exists)
-  const stl = getStlValues(styles);
-
-  // ------- set User Element Properties (If Exists)
-  const userElProps: any = {};
-
-  for (const object of elementsProperties) {
-    for (const keyProp in object) {
-      const valueProp = object[keyProp];
-      userElProps[keyProp] = valueProp;
-    }
-  }
-
   return <></>;
 };
