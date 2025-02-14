@@ -41,12 +41,12 @@ function Screen3Render(props: Tprops) {
     }
   };
 
-  const xxx = processFunctions(functions);
-  console.log({ xxx });
-
   // ---------- call Functions (If Exists)
   React.useEffect(() => {
     const callFn = async () => {
+      const xxx = await processFunctions(functions);
+      console.log({ xxx });
+
       console.log({ functions });
       for (const currFunc of functions) await currFunc();
     };
@@ -61,4 +61,3 @@ function Screen3Render(props: Tprops) {
   // ---------- set Render
   return <View style={[stl]}>{mapElements(screenElements, args)}</View>;
 }
-
