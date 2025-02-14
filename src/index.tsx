@@ -48,21 +48,7 @@
                     </RN.Text>);
                 }],
 
-          functions:[
-        async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("sc2");
-        }
-        ]
- , trigger: 'on press'
-}}), async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on press'
-}})],
+          functions:[()=>{}],
 
           args,
         }}/>, 
@@ -87,11 +73,7 @@
                     </RN.Text>);
                 }],
 
-          functions:[async (...args) =>
- functions.funcGroup({ args, pass:{
- arrFunctions: [()=>{}]
- , trigger: 'on init'
-}})],
+          functions:[()=>{}],
 
           args,
         }}/>
