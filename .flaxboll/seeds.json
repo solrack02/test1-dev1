@@ -620,8 +620,8 @@
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "Propriedades de Elementos",
-                "en": "Elements Properties"
+                "pt-br": "Propriedades",
+                "en": "Properties"
               },
               "capsIptCapsDescription": {
                 "pt-br": "",
@@ -646,7 +646,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "{ color: 'black', fontSize: 12, }",
-              "capsIptCapsTypesToAdd": ["Estilo Texto"]
+              "capsIptCapsTypesToAdd": ["string process"]
             }
           },
           "ccc_text-2": {
