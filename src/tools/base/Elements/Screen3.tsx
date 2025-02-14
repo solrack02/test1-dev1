@@ -29,26 +29,16 @@ export const Screen3 = (props: Tprops) => {
 function Screen3Render(props: Tprops) {
   const { styles, screenElements, functions, args } = props.pass;
 
-  const processFunctions = async arr => {
-    for (const fn of arr) {
-      console.log(typeof fn);
-      console.log(fn);
-      if (typeof fn === 'function') {
-        const result = await fn(); // Executa a função assíncrona
-        console.log('RESULT GROUP', { result });
-
-        if (result?.pass?.trigger) {
-          console.log('Trigger:', result.pass.trigger);
-        }
-      }
-    }
-  };
-
   // ---------- call Functions (If Exists)
   React.useEffect(() => {
     const callFn = async () => {
-      const xxx = await processFunctions(functions);
-      console.log({ xxx });
+      const processFunctions = async arr => {
+        for (const fn of arr) {
+          if (typeof fn === 'function') return await fn();
+        }
+      };
+      const { trigger, arrFunctions } = await processFunctions(functions);
+      console.log({ trigger, arrFunctions });
 
       console.log({ functions });
       for (const currFunc of functions) await currFunc();
