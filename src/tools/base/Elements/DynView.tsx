@@ -83,7 +83,7 @@ export const DynView = (props: Tprops) => {
   if (!sttTypeFunc)
     return (
       <View {...allProps}>
-        <ScrollView>mapElements(childrenItems, args)</ScrollView>
+        <ScrollView>{mapElements(childrenItems, args)}</ScrollView>
       </View>
     );
 
@@ -99,7 +99,7 @@ export const DynView = (props: Tprops) => {
   if (sttTypeFunc === 'on init')
     return (
       <View {...allProps}>
-        <ScrollView>mapElements(childrenItems, args)</ScrollView>
+        <ScrollView>{mapElements(childrenItems, args)}</ScrollView>
       </View>
     );
 };
