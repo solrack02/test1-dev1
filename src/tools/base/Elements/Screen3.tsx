@@ -28,6 +28,7 @@ export const Screen3 = (props: Tprops) => {
 
 function Screen3Render(props: Tprops) {
   const { styles, screenElements, functions, args } = props.pass;
+  console.log({ props });
   console.log({ functions });
 
   // ---------- call Functions (If Exists)
@@ -46,3 +47,4 @@ function Screen3Render(props: Tprops) {
   // ---------- set Render
   return <View style={[stl]}>{mapElements(screenElements, args)}</View>;
 }
+
