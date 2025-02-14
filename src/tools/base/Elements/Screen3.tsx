@@ -35,10 +35,9 @@ function Screen3Render(props: Tprops) {
   React.useEffect(() => {
     const callFn = async () => {
       const { trigger, arrFunctions } = await processFunctions(functions);
-      console.log({ trigger });
       setTypeFunc(trigger);
+      setPressFuncs(arrFunctions);
 
-      if (trigger === 'on press') setPressFuncs(arrFunctions);
       if (trigger === 'on init') {
         console.log('ON INIT >>>>>');
         for (const currFunc of arrFunctions) await currFunc();
@@ -47,7 +46,7 @@ function Screen3Render(props: Tprops) {
     };
 
     callFn().catch(err => console.log({ err }));
-  }, [sttTypeFunc]);
+  }, []);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
