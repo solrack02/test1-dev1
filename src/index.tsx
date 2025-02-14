@@ -48,7 +48,12 @@
                     </RN.Text>);
                 }],
 
-          startFunctions:[()=>{}],
+          startFunctions:[
+        (...args) => {
+          // ---------- get Function from A_Project Scope
+          return tools.goTo("sc2");
+        }
+        ],
 
           args,
         }}/>, 
