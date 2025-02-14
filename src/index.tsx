@@ -59,9 +59,20 @@
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:[{}],
 
-            styles:[{ width: 50, height: 50, backgroundColor: "red" }],
+            styles:[{ width: '100%', height: 250, backgroundColor: "red" }],
+
+            functions:[()=>{}],            childrenItems:[
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[{ width: 20, height: 400, backgroundColor: "grey" }],
 
             functions:[()=>{}],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        ],
 
             args,
           }}/>
