@@ -795,7 +795,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": " ",
-              "capsIptCapsTypesToAdd": ["propValue", "varValue"]
+              "capsIptCapsTypesToAdd": ["free value"]
             }
           }
         },
