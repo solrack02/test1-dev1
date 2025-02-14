@@ -39,7 +39,7 @@ export const Screen3 = ({ pass }: Tprops) => {
 
 function Screen3Render({ pass }: Tprops) {
   const { styles, screenElements, functions, args } = pass;
-  const [sttTypeFunc, setTypeFunc] = useState('on init');
+  const [sttTypeFunc, setTypeFunc] = useState('');
   const [sttPressFuncs, setPressFuncs] = useState<Array<() => Promise<void>>>(
     [],
   );
@@ -49,8 +49,8 @@ function Screen3Render({ pass }: Tprops) {
     setTypeFunc(trigger);
     setPressFuncs(arrFunctions);
 
+    // ------- set Init Functions (Capsules)
     if (trigger === 'on init') {
-      console.log('ON INIT >>>>>');
       for (const currFunc of arrFunctions) await currFunc();
     }
   };
@@ -63,15 +63,15 @@ function Screen3Render({ pass }: Tprops) {
   const stl = getStlValues(styles);
 
   // ---------- set Render
-  if (!sttTypeFunc)
+  if (!sttTypeFunc) {
     return <View style={stl}>{mapElements(screenElements, args)}</View>;
-
-  const onPressFunc = async () => {
-    console.log('Clicou', sttPressFuncs);
-    for (const currFunc of sttPressFuncs) await currFunc();
-  };
+  }
 
   if (sttTypeFunc === 'on press') {
+    const onPressFunc = async () => {
+      console.log('Clicou', sttPressFuncs);
+      for (const currFunc of sttPressFuncs) await currFunc();
+    };
     return (
       <Pressable style={stl} onPress={onPressFunc}>
         {mapElements(screenElements, args)}
