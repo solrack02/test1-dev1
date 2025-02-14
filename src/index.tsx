@@ -34,6 +34,7 @@
         { backgroundColor: "red", flex: 1 },, { backgroundColor: "green", alignItems: "center", justifyContent: "center" }],
 
           screenElements:[
+        
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:[{}],
@@ -50,6 +51,17 @@
         ]
  , trigger: 'on press'
 }})],            childrenItems:[() =><></>],
+
+            args,
+          }}/>
+        , 
+
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
+
+            styles:[{ width: 50, height: 50, backgroundColor: "red" }],
+
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
             args,
           }}/>
