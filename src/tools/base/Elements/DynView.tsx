@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Pressable, View } from 'react-native';
 
 // ---------- import Local Tools
-import { argSel, getStlValues, mapElements, pathSel } from '../project';
+import { getStlValues } from '../project';
 import { useData } from '../../..';
 
 export const css =
@@ -46,41 +46,42 @@ export const DynView = (props: Tprops) => {
   const { elementsProperties, styles, functions } = props.pass;
   const { childrenItems, args } = props.pass;
 
-  const callFn = async () => {
-    const { trigger, arrFunctions } = await processFunctions(functions);
-    setTypeFunc(trigger);
-    setPressFuncs(arrFunctions);
+  //   const callFn = async () => {
+  //     const { trigger, arrFunctions } = await processFunctions(functions);
+  //     setTypeFunc(trigger);
+  //     setPressFuncs(arrFunctions);
 
-    // ------- set Init Functions (Capsules)
-    if (trigger === 'on init') {
-      for (const currFunc of arrFunctions) await currFunc(args);
-    }
-  };
+  //     // ------- set Init Functions (Capsules)
+  //     if (trigger === 'on init') {
+  //       for (const currFunc of arrFunctions) await currFunc(args);
+  //     }
+  //   };
 
   useEffect(() => {
-    callFn();
+    // callFn();
   }, []);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
 
   // ------- set User Element Properties (If Exists)
-  const userElProps: any = {};
+  //   const userElProps: any = {};
 
-  for (const object of elementsProperties) {
-    for (const keyProp in object) {
-      const valueProp = object[keyProp];
-      userElProps[keyProp] = valueProp;
-    }
-  }
+  //   for (const object of elementsProperties) {
+  //     for (const keyProp in object) {
+  //       const valueProp = object[keyProp];
+  //       userElProps[keyProp] = valueProp;
+  //     }
+  //   }
 
-  const allProps = {
-    style: stl,
-    children: mapElements(childrenItems, args),
-    ...userElProps,
-  };
+  //   const allProps = {
+  //     style: stl,
+  //     children: mapElements(childrenItems, args),
+  //     ...userElProps,
+  //   };
 
   // ---------- set Render
+
   return <View style={stl} />;
 
   //   if (!sttTypeFunc) return <View {...allProps} />;
