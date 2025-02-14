@@ -60,6 +60,7 @@ function Screen3Render(props: Tprops) {
     <Pressable
       style={[stl]}
       onPress={async () => {
+        console.log('CRICOU', sttPressFuncs);
         for (const currFunc of sttPressFuncs) await currFunc();
       }}
     >
