@@ -1,12 +1,13 @@
 
 // ---------- import Packs
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
 // ---------- import Local Tools
 import { getStlValues, mapElements } from '../project';
 import { useRoutes } from '../../..';
 
+// ---------- Types
 type Tprops = {
   pass: {
     pathScreen: string;
@@ -18,62 +19,67 @@ type Tprops = {
 };
 
 // Screen3 (newBase)
-export const Screen3 = (props: Tprops) => {
-  const { pathScreen } = props.pass;
+export const Screen3 = ({ pass }: Tprops) => {
+  const { pathScreen } = pass;
   const currRoute = useRoutes(ct => ct.currRoute);
   const condShow = pathScreen === currRoute;
 
-  return <>{condShow && <Screen3Render pass={props.pass} />}</>;
+  return condShow ? <Screen3Render pass={pass} /> : null;
 };
 
-function Screen3Render(props: Tprops) {
-  const { styles, screenElements, functions, args } = props.pass;
-  const [sttTypeFunc, setTypeFunc] = React.useState('');
-  const [sttPressFuncs, setPressFuncs] = React.useState([async () => {}]);
+function Screen3Render({ pass }: Tprops) {
+  const { styles, screenElements, functions, args } = pass;
+  const [sttTypeFunc, setTypeFunc] = useState('');
+  const [sttPressFuncs, setPressFuncs] = useState<Array<() => Promise<void>>>(
+    [],
+  );
 
-  // ---------- call Functions (If Exists)
-  React.useEffect(() => {
+  useEffect(() => {
     const callFn = async () => {
-      const { trigger, arrFunctions } = await processFunctions(functions);
-      setTypeFunc(trigger);
-      setPressFuncs(arrFunctions);
+      try {
+        const { trigger, arrFunctions } = await processFunctions(functions);
+        setTypeFunc(trigger);
+        setPressFuncs(arrFunctions);
 
-      if (trigger === 'on init') {
-        console.log('ON INIT >>>>>');
-        for (const currFunc of arrFunctions) await currFunc();
+        if (trigger === 'on init') {
+          console.log('ON INIT >>>>>');
+          for (const currFunc of arrFunctions) await currFunc();
+        }
+      } catch (err) {
+        console.error('Error processing functions:', err);
       }
-
-      console.log({ sttTypeFunc });
-      console.log({ sttPressFuncs });
     };
 
-    callFn().catch(err => console.log({ err }));
-  }, []);
+    callFn();
+  }, [sttTypeFunc]);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
 
   // ---------- set Render
-  return sttTypeFunc === '' ? (
-    <></>
-  ) : sttTypeFunc === 'on press' ? (
+  if (!sttTypeFunc) return null;
+
+  return sttTypeFunc === 'on press' ? (
     <Pressable
-      style={[stl]}
+      style={stl}
       onPress={async () => {
-        console.log('CRICOU', sttPressFuncs);
+        console.log('Clicou', sttPressFuncs);
         for (const currFunc of sttPressFuncs) await currFunc();
       }}
     >
       {mapElements(screenElements, args)}
     </Pressable>
   ) : (
-    <View style={[stl]}>{mapElements(screenElements, args)}</View>
+    <View style={stl}>{mapElements(screenElements, args)}</View>
   );
 }
 
-export const processFunctions = async arr => {
+export const processFunctions = async (arr: any[]) => {
   for (const fn of arr) {
-    if (typeof fn === 'function') return await fn();
+    if (typeof fn === 'function') {
+      return await fn();
+    }
   }
+  return { trigger: '', arrFunctions: [] };
 };
 
