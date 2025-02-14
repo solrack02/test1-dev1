@@ -38,7 +38,14 @@
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:[{}],
 
-            styles:[{ width: 50, height: 50px, backgroundColor: "black" },],
+            styles:[
+              {
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                minHeight: 22,
+                width: "100%",
+              }
+              ],
 
             variablePath:[ ],
 
