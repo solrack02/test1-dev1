@@ -1,6 +1,6 @@
 
 // ---------- import Packs
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 type Tprops = {
   pass: {
