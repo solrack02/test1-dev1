@@ -28,7 +28,7 @@ export const Screen3 = (props: Tprops) => {
 
 function Screen3Render(props: Tprops) {
   const { styles, screenElements, functions, args } = props.pass;
-  const [sttTypeFunc, setTypeFunc] = React.useState('');
+  const [sttTypeFunc, setTypeFunc] = React.useState('on press');
   const [sttPressFuncs, setPressFuncs] = React.useState([async () => {}]);
 
   // ---------- call Functions (If Exists)
@@ -41,11 +41,10 @@ function Screen3Render(props: Tprops) {
       };
       const { trigger, arrFunctions } = await processFunctions(functions);
       setTypeFunc(trigger);
-      console.log({ trigger, arrFunctions });
 
       if (trigger === 'on press') setPressFuncs(arrFunctions);
       if (trigger === 'on init') {
-        console.log({ arrFunctions });
+        console.log('ON INIT >>>>>');
         for (const currFunc of arrFunctions) await currFunc();
       }
     };
@@ -54,14 +53,10 @@ function Screen3Render(props: Tprops) {
   }, []);
 
   // ---------- set Variables Styles (If Exists)
-  console.log('AQUI 2', { styles });
   const stl = getStlValues(styles);
-  console.log('AQUI 3', { stl });
 
   // ---------- set Render
-  return sttTypeFunc ? (
-    <View style={[stl]}>{mapElements(screenElements, args)}</View>
-  ) : (
+  return sttTypeFunc === 'on press' ? (
     <Pressable
       style={[stl]}
       onPress={async () => {
@@ -70,5 +65,7 @@ function Screen3Render(props: Tprops) {
     >
       {mapElements(screenElements, args)}
     </Pressable>
+  ) : (
+    <View style={[stl]}>{mapElements(screenElements, args)}</View>
   );
 }
