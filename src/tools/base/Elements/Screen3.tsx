@@ -30,7 +30,9 @@ export const Screen3 = ({ pass }: Tprops) => {
 function Screen3Render({ pass }: Tprops) {
   const { styles, screenElements, functions, args } = pass;
   const [sttTypeFunc, setTypeFunc] = useState('');
-  const [sttPressFuncs, setPressFuncs] = useState<Array<() => Promise<void>>>([]);
+  const [sttPressFuncs, setPressFuncs] = useState<Array<() => Promise<void>>>(
+    [],
+  );
 
   useEffect(() => {
     const callFn = async () => {
@@ -49,7 +51,7 @@ function Screen3Render({ pass }: Tprops) {
     };
 
     callFn();
-  }, [functions]);
+  }, [sttTypeFunc, sttPressFuncs]);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
