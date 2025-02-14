@@ -74,22 +74,5 @@ export const DynView = (props: Tprops) => {
     }
   }
 
-  const allProps = {
-    style: stl,
-    children: mapElements(childrenItems, args),
-    ...userElProps,
-  };
-
-  // ---------- set Render
-  if (!sttTypeFunc) return <View {...allProps} />;
-
-  if (sttTypeFunc === 'on press') {
-    allProps.onPress = async () => {
-      for (const currFunc of sttPressFuncs) await currFunc(args);
-    };
-
-    return <Pressable {...allProps} />;
-  }
-
-  if (sttTypeFunc === 'on init') return <View {...allProps} />;
+  return <></>;
 };
