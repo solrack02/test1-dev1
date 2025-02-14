@@ -1,12 +1,11 @@
 
 // ---------- import Packs
-import React from 'react';
-import { View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Pressable, View } from 'react-native';
 
 // ---------- import Local Tools
 import { argSel, getStlValues, mapElements, pathSel } from '../project';
 import { useData } from '../../..';
-import { backgroundColor, width } from '../stls';
 
 export const css =
   'color: lightblue; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
@@ -15,31 +14,52 @@ type Tprops = {
   pass: {
     elementsProperties: any;
     styles: any;
-    variablePath: string[];
-    expectedVal: string[];
+    functions: any[];
     childrenItems: any;
     args: any;
   };
 };
 
+export const processFunctions = async (arr: any[]) => {
+  const defaultVal = { trigger: '', arrFunctions: [] };
+
+  for (const fn of arr) {
+    if (typeof fn === 'function') {
+      const result = await fn();
+      return result || defaultVal;
+    }
+  }
+
+  return defaultVal;
+};
+
 // DynView / BOX
 export const DynView = (props: Tprops) => {
   console.log('BOX', { props });
+
+  const [sttTypeFunc, setTypeFunc] = useState('');
+  const [sttPressFuncs, setPressFuncs] = useState<
+    Array<(args: any) => Promise<void>>
+  >([]);
+
   // ---------- set Props
-  const { elementsProperties, variablePath, styles } = props.pass;
-  const { expectedVal, childrenItems, args } = props.pass;
+  const { elementsProperties, styles, functions } = props.pass;
+  const { childrenItems, args } = props.pass;
 
-  // ---------- set VarPath and expectedVal as a single string
-  let varPath = variablePath.join();
-  const newVal = expectedVal.join();
+  const callFn = async () => {
+    const { trigger, arrFunctions } = await processFunctions(functions);
+    setTypeFunc(trigger);
+    setPressFuncs(arrFunctions);
 
-  const condHash = varPath.startsWith('#');
-  let compareVal = useData(ct => pathSel(ct, varPath));
-  if (condHash) compareVal = argSel(args, varPath);
+    // ------- set Init Functions (Capsules)
+    if (trigger === 'on init') {
+      for (const currFunc of arrFunctions) await currFunc(args);
+    }
+  };
 
-  // ---------- set Conditional Element Render
-  let condRender = true;
-  if (variablePath.length > 0) condRender = compareVal === newVal;
+  useEffect(() => {
+    callFn();
+  }, []);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
@@ -56,11 +76,22 @@ export const DynView = (props: Tprops) => {
 
   const allProps = {
     style: stl,
-    // style: styles,
     children: mapElements(childrenItems, args),
     ...userElProps,
   };
 
   // ---------- set Render
-  return <>{condRender && <View {...allProps} />}</>;
+  return <View style={stl} />;
+
+  //   if (!sttTypeFunc) return <View {...allProps} />;
+
+  //   if (sttTypeFunc === 'on press') {
+  //     allProps.onPress = async () => {
+  //       for (const currFunc of sttPressFuncs) await currFunc(args);
+  //     };
+
+  //     return <Pressable {...allProps} />;
+  //   }
+
+  //   if (sttTypeFunc === 'on init') return <View {...allProps} />;
 };
