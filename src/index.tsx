@@ -138,9 +138,7 @@
           const initCt = () => ({
             
         'all': jsvals.j8({pass: {
-          propertieValues: { 'colors': jsvals.j8({pass: {
-          propertieValues: { [ "red", "green" ] }
-        }}) }
+          propertieValues: {   }
         }}), 'screens': jsvals.j8({pass: {
           propertieValues: {   }
         }})
