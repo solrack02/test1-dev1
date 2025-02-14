@@ -36,22 +36,21 @@ function Screen3Render({ pass }: Tprops) {
 
   useEffect(() => {
     const callFn = async () => {
-      try {
-        const { trigger, arrFunctions } = await processFunctions(functions);
-        setTypeFunc(trigger);
-        setPressFuncs(arrFunctions);
+      const { trigger, arrFunctions } = await processFunctions(functions);
+      setTypeFunc(trigger);
+      setPressFuncs(arrFunctions);
 
-        if (trigger === 'on init') {
-          console.log('ON INIT >>>>>');
-          for (const currFunc of arrFunctions) await currFunc();
-        }
-      } catch (err) {
-        console.error('Error processing functions:', err);
-      }
+      console.log('ON INIT >>>>>');
+      // if (trigger === 'on init') {
+      //   for (const currFunc of arrFunctions) await currFunc();
+      // }
     };
 
+    console.log('dentro EFFECT', sttTypeFunc, sttPressFuncs);
     callFn();
-  }, [sttPressFuncs]);
+  }, []);
+
+  console.log('FORA EFFECT', sttTypeFunc, sttPressFuncs);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
