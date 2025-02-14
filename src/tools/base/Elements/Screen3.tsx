@@ -43,6 +43,7 @@ function Screen3Render(props: Tprops) {
         console.log('ON INIT >>>>>');
         for (const currFunc of arrFunctions) await currFunc();
       }
+      console.log({ sttTypeFunc });
     };
 
     callFn().catch(err => console.log({ err }));
@@ -72,3 +73,4 @@ export const processFunctions = async arr => {
     if (typeof fn === 'function') return await fn();
   }
 };
+
