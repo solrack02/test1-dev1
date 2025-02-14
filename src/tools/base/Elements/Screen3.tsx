@@ -70,11 +70,17 @@ function Screen3Render({ pass }: Tprops) {
     for (const currFunc of sttPressFuncs) await currFunc();
   };
 
-  return sttTypeFunc === 'on press' ? (
-    <Pressable style={stl} onPress={onPressFunc}>
-      {mapElements(screenElements, args)}
-    </Pressable>
-  ) : (
-    <View style={stl}>{mapElements(screenElements, args)}</View>
-  );
+  if (sttTypeFunc === 'on press') {
+    return (
+      <Pressable style={stl} onPress={onPressFunc}>
+        {mapElements(screenElements, args)}
+      </Pressable>
+    );
+  }
+
+  if (sttTypeFunc === 'on init') {
+    return <View style={stl}>{mapElements(screenElements, args)}</View>;
+  }
+
+  return <View style={stl}>{mapElements(screenElements, args)}</View>;
 }
