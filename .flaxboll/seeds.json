@@ -425,7 +425,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "{}",
-              "capsIptCapsTypesToAdd": ["Propriedade Caixa"]
+              "capsIptCapsTypesToAdd": ["string process"]
             }
           },
           "ccc_dynView-1": {
