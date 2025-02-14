@@ -31,8 +31,11 @@ function Screen3Render(props: Tprops) {
 
   const processFunctions = async arr => {
     for (const fn of arr) {
+      console.log(typeof fn);
+      console.log(fn);
       if (typeof fn === 'function') {
         const result = await fn(); // Executa a função assíncrona
+        console.log('RESULT GROUP', { result });
 
         if (result?.pass?.trigger) {
           console.log('Trigger:', result.pass.trigger);
