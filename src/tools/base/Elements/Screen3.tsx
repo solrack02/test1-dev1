@@ -1,7 +1,7 @@
 
 // ---------- import Packs
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
 // ---------- import Local Tools
 import { getStlValues, mapElements } from '../project';
@@ -28,6 +28,8 @@ export const Screen3 = (props: Tprops) => {
 
 function Screen3Render(props: Tprops) {
   const { styles, screenElements, functions, args } = props.pass;
+  const [sttTypeFunc, setTypeFunc] = React.useState('');
+  const [sttPressFuncs, setPressFuncs] = React.useState([async () => {}]);
 
   // ---------- call Functions (If Exists)
   React.useEffect(() => {
@@ -38,11 +40,16 @@ function Screen3Render(props: Tprops) {
         }
       };
       const { trigger, arrFunctions } = await processFunctions(functions);
+      setTypeFunc(trigger);
       console.log({ trigger, arrFunctions });
 
-      console.log({ functions });
-      for (const currFunc of functions) await currFunc();
+      if (trigger === 'on press') setPressFuncs(arrFunctions);
+      if (trigger === 'on init') {
+        console.log({ arrFunctions });
+        for (const currFunc of arrFunctions) await currFunc();
+      }
     };
+
     callFn().catch(err => console.log({ err }));
   }, []);
 
@@ -52,5 +59,16 @@ function Screen3Render(props: Tprops) {
   console.log('AQUI 3', { stl });
 
   // ---------- set Render
-  return <View style={[stl]}>{mapElements(screenElements, args)}</View>;
+  return sttTypeFunc ? (
+    <View style={[stl]}>{mapElements(screenElements, args)}</View>
+  ) : (
+    <Pressable
+      style={[stl]}
+      onPress={async () => {
+        for (const currFunc of sttPressFuncs) await currFunc();
+      }}
+    >
+      {mapElements(screenElements, args)}
+    </Pressable>
+  );
 }
