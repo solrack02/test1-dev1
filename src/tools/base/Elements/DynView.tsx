@@ -42,7 +42,7 @@ export const DynView = (props: Tprops) => {
   if (variablePath.length > 0) condRender = compareVal === newVal;
 
   // ---------- set Variables Styles (If Exists)
-  //   const stl = getStlValues(styles);
+  const stl = getStlValues(styles);
 
   // ------- set User Element Properties (If Exists)
   const userElProps: any = {};
@@ -55,8 +55,8 @@ export const DynView = (props: Tprops) => {
   }
 
   const allProps = {
-    // style: [stl],
-    style: styles,
+    style: [stl],
+    // style: styles,
     children: mapElements(childrenItems, args),
     ...userElProps,
   };
