@@ -525,18 +525,15 @@
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "Propriedades de Elementos",
-                "en": "Elements Properties"
+                "pt-br": "Propriedades",
+                "en": "Properties"
               },
               "capsIptCapsDescription": {
                 "pt-br": "",
                 "en": ""
               },
               "capsIptCapsDfCode": "{}",
-              "capsIptCapsTypesToAdd": [
-                "Propriedade Caixa",
-                "Propriedade Imagem"
-              ]
+              "capsIptCapsTypesToAdd": ["string process"]
             }
           },
           "ccc_image-1": {
@@ -554,11 +551,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "\n              {\n                height: \"50px\",\n                width: \"80px\",\n                backgroundColor: \"#FDFDFD\",\n                borderWidth: 2,\n                borderColor: \"#EEE\"\n              }\n              ",
-              "capsIptCapsTypesToAdd": [
-                "Estilo Caixa",
-                "Estilo Layout",
-                "Estilo Imagem"
-              ]
+              "capsIptCapsTypesToAdd": ["string process"]
             }
           },
           "ccc_image-2": {
