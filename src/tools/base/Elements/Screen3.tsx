@@ -1,7 +1,7 @@
 
 // ---------- import Packs
 import React, { useEffect, useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Pressable, View } from 'react-native';
 
 // ---------- import Local Tools
 import { getStlValues, mapElements } from '../project';
@@ -30,9 +30,7 @@ export const Screen3 = ({ pass }: Tprops) => {
 function Screen3Render({ pass }: Tprops) {
   const { styles, screenElements, functions, args } = pass;
   const [sttTypeFunc, setTypeFunc] = useState('');
-  const [sttPressFuncs, setPressFuncs] = useState<Array<() => Promise<void>>>(
-    [],
-  );
+  const [sttPressFuncs, setPressFuncs] = useState<Array<() => Promise<void>>>([]);
 
   useEffect(() => {
     const callFn = async () => {
@@ -51,7 +49,7 @@ function Screen3Render({ pass }: Tprops) {
     };
 
     callFn();
-  }, [sttTypeFunc]);
+  }, [functions]);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
@@ -77,9 +75,9 @@ function Screen3Render({ pass }: Tprops) {
 export const processFunctions = async (arr: any[]) => {
   for (const fn of arr) {
     if (typeof fn === 'function') {
-      return await fn();
+      const result = await fn();
+      return result || { trigger: '', arrFunctions: [] };
     }
   }
   return { trigger: '', arrFunctions: [] };
 };
-
