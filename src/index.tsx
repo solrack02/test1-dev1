@@ -38,7 +38,7 @@
  (...args:any) => <Elements.DynView pass={{
  elementsProperties:[{}],
 
- styles:[{ width: 50, height: 50, backgroundColor: "black" },],
+ styles:[{ flex: 1, backgroundColor: "black" }],
 
  functions:[()=>{}],
 
