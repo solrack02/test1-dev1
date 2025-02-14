@@ -707,6 +707,75 @@
     }
   },
 
+  "ccc_funcGroup": {
+    "capsCodeInfo": {
+      "1": {
+        "capsLabel": {
+          "pt-br": "func Group",
+          "en": "func Group"
+        },
+        "capsVersionCreatedAt": {
+          "seconds": 1669821908,
+          "nanoseconds": 764000000
+        },
+        "capsCodeTypes": ["function", "func Group"],
+        "capsCodeVersionID": "1",
+        "capsCodeText": "async (...args) =>\n functions.funcGroup({ args, pass:{\n arrFunctions: [!#!1!#!]\n , trigger: [!#!2!#!]\n}})",
+        "capsDescription": {
+          "pt-br": "",
+          "en": ""
+        },
+        "capsCodeInputs": {
+          "ccc_funcGroup-0": {
+            "capsIptCodeID": "ccc_funcGroup-0",
+            "capsIptPosition": "0",
+            "capsIptRemoved": false,
+            "capsIptType": "capsules",
+            "capsIptCapsInfo": {
+              "capsIptCapsLabel": {
+                "pt-br": "Functions",
+                "en": "Functions"
+              },
+              "capsIptCapsDescription": {
+                "pt-br": "",
+                "en": ""
+              },
+              "capsIptCapsDfCode": "()=>{}",
+              "capsIptCapsTypesToAdd": ["function"]
+            }
+          },
+          "ccc_funcGroup-1": {
+            "capsIptRemoved": false,
+            "capsIptCodeID": "ccc_funcGroup-1",
+            "capsIptType": "text",
+            "capsIptTxtInfo": {
+              "capsIptTxtDescription": {
+                "pt-br": "Valores possíveis: 'on press', 'on init'.",
+                "en": "Possible values: 'on press', 'on init'."
+              },
+              "capsIptTxtDfValue": "on press",
+              "capsIptTxtLabel": {
+                "pt-br": "Gatilho",
+                "en": "Trigger"
+              }
+            },
+            "capsIptPosition": "0"
+          }
+        }
+      }
+    },
+    "capsDB": {
+      "capsID": "ccc_funcGroup",
+      "capsUserID": "xxx1",
+      "capsCreatedAt": {
+        "seconds": 1669821908,
+        "nanoseconds": 764000000
+      },
+      "capsPrjID": "yyy1"
+    },
+    "capsType": "code"
+  },
+
   "ccc_goTo": {
     "capsCodeInfo": {
       "1": {
@@ -734,23 +803,6 @@
               "capsIptTxtLabel": {
                 "pt-br": "Caminho da Tela",
                 "en": "Screen Path"
-              }
-            },
-            "capsIptPosition": "0"
-          },
-          "ccc_goTo-1": {
-            "capsIptRemoved": false,
-            "capsIptCodeID": "ccc_goTo-1",
-            "capsIptType": "text",
-            "capsIptTxtInfo": {
-              "capsIptTxtDescription": {
-                "pt-br": "Valores possíveis: 'on press', 'on init'.",
-                "en": "Possible values: 'on press', 'on init'."
-              },
-              "capsIptTxtDfValue": "on press",
-              "capsIptTxtLabel": {
-                "pt-br": "Gatilho",
-                "en": "Trigger"
               }
             },
             "capsIptPosition": "0"
