@@ -446,44 +446,28 @@
               "capsIptCapsTypesToAdd": ["string process"]
             }
           },
+
           "ccc_dynView-2": {
-            "capsIptPosition": "2",
             "capsIptCodeID": "ccc_dynView-2",
+            "capsIptPosition": "2",
             "capsIptRemoved": false,
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "Caminho da Variável",
-                "en": "variable path"
+                "pt-br": "Funções",
+                "en": "Functions"
               },
               "capsIptCapsDescription": {
                 "pt-br": "",
                 "en": ""
               },
-              "capsIptCapsTypesToAdd": ["string process"],
-              "capsIptCapsDfCode": " "
+              "capsIptCapsDfCode": "()=>{}",
+              "capsIptCapsTypesToAdd": ["trigger"]
             }
           },
+
           "ccc_dynView-3": {
             "capsIptPosition": "3",
-            "capsIptCodeID": "ccc_dynView-3",
-            "capsIptRemoved": false,
-            "capsIptType": "capsules",
-            "capsIptCapsInfo": {
-              "capsIptCapsLabel": {
-                "pt-br": "Valor Esperado",
-                "en": "Expected Value"
-              },
-              "capsIptCapsDescription": {
-                "pt-br": "",
-                "en": ""
-              },
-              "capsIptCapsDfCode": " ",
-              "capsIptCapsTypesToAdd": ["string process"]
-            }
-          },
-          "ccc_dynView-4": {
-            "capsIptPosition": "4",
             "capsIptCodeID": "ccc_dynView-4",
             "capsIptCapsInfo": {
               "capsIptCapsDescription": {
