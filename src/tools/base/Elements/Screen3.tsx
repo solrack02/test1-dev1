@@ -63,7 +63,8 @@ function Screen3Render({ pass }: Tprops) {
   const stl = getStlValues(styles);
 
   // ---------- set Render
-  if (!sttTypeFunc) return null;
+  if (!sttTypeFunc)
+    return <View style={stl}>{mapElements(screenElements, args)}</View>;
 
   const onPressFunc = async () => {
     console.log('Clicou', sttPressFuncs);
@@ -81,7 +82,4 @@ function Screen3Render({ pass }: Tprops) {
   if (sttTypeFunc === 'on init') {
     return <View style={stl}>{mapElements(screenElements, args)}</View>;
   }
-
-  console.log({ sttTypeFunc });
-  return <View style={stl}>{mapElements(screenElements, args)}</View>;
 }
