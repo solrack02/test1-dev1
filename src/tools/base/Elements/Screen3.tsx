@@ -12,7 +12,7 @@ type Tprops = {
     pathScreen: string;
     styles: any;
     screenElements: any;
-    startFunctions: any;
+    functions: any;
     args: any;
   };
 };
@@ -27,12 +27,12 @@ export const Screen3 = (props: Tprops) => {
 };
 
 function Screen3Render(props: Tprops) {
-  const { styles, screenElements, startFunctions, args } = props.pass;
+  const { styles, screenElements, functions, args } = props.pass;
 
   // ---------- call Functions (If Exists)
   React.useEffect(() => {
     const callFn = async () => {
-      for (const currFunc of startFunctions) await currFunc();
+      for (const currFunc of functions) await currFunc();
     };
     callFn().catch(err => console.log({ err }));
   }, []);
@@ -45,4 +45,3 @@ function Screen3Render(props: Tprops) {
   // ---------- set Render
   return <View style={[stl]}>{mapElements(screenElements, args)}</View>;
 }
-
