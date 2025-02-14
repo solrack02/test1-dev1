@@ -82,5 +82,6 @@ function Screen3Render({ pass }: Tprops) {
     return <View style={stl}>{mapElements(screenElements, args)}</View>;
   }
 
+  console.log({ sttTypeFunc });
   return <View style={stl}>{mapElements(screenElements, args)}</View>;
 }
