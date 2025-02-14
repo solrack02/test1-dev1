@@ -322,8 +322,8 @@
               },
               "capsIptTxtDfValue": "home",
               "capsIptTxtLabel": {
-                "pt-br": "Caminho da Tela",
-                "en": "Path Screen"
+                "pt-br": "Rota",
+                "en": "Route"
               }
             }
           },
@@ -352,8 +352,8 @@
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "Elementos de Tela",
-                "en": "Screen Elements"
+                "pt-br": "Elementos",
+                "en": "Elements"
               },
               "capsIptCapsDescription": {
                 "pt-br": "Permite a inserção de elementos filhos",
