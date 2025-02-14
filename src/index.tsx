@@ -37,7 +37,7 @@
         
 
           (...args:any) => <Elements.DynView pass={{
-            elementsProperties:[{}],
+            elementsProperties:[{ disabled: true }],
 
             styles:[{ width: 50, height: 50, backgroundColor: "black" }],
 
