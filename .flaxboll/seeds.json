@@ -408,7 +408,7 @@
           "en": "Makes a view in the screen"
         },
         "capsCodeTypes": ["Elemento de Tela", "DynView"],
-        "capsCodeText": "\n\n          (...args:any) => <Elements.DynView pass={{\n            elementsProperties:[!#!1!#!],\n\n            styles:[!#!2!#!],\n\n            variablePath:[!#!3!#!],\n\n            expectedVal:[!#!4!#!],\n\n            childrenItems:[!#!5!#!],\n\n            args,\n          }}/>\n        ",
+        "capsCodeText": "\n\n (...args:any) => <Elements.DynView pass={{\n elementsProperties:[!#!0!#!],\n\n styles:[!#!1!#!],\n\n functions:[!#!2!#!],\n\n ,\n\n childrenItems:[!#!3!#!],\n\n args,\n }}/> \n",
         "capsCodeInputs": {
           "ccc_dynView-0": {
             "capsIptCodeID": "ccc_dynView-0",
@@ -698,7 +698,7 @@
           "seconds": 1669821908,
           "nanoseconds": 764000000
         },
-        "capsCodeTypes": ["function", "func Group"],
+        "capsCodeTypes": ["trigger"],
         "capsCodeVersionID": "1",
         "capsCodeText": "async (...args) =>\n functions.funcGroup({ args, pass:{\n arrFunctions: [!#!1!#!]\n , trigger: '!#!2!#!'\n}})",
         "capsDescription": {
