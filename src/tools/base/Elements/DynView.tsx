@@ -22,7 +22,7 @@ type Tprops = {
   };
 };
 
-// DynView - ccc_dynView Com Esquema Join Leitura de Var. (newBase)
+// DynView / BOX
 export const DynView = (props: Tprops) => {
   // ---------- set Props
   const { elementsProperties, variablePath, styles } = props.pass;
@@ -41,7 +41,7 @@ export const DynView = (props: Tprops) => {
   if (variablePath.length > 0) condRender = compareVal === newVal;
 
   // ---------- set Variables Styles (If Exists)
-  const stl = getStlValues(styles);
+  //   const stl = getStlValues(styles);
 
   // ------- set User Element Properties (If Exists)
   const userElProps: any = {};
@@ -55,7 +55,7 @@ export const DynView = (props: Tprops) => {
 
   const allProps = {
     // style: [stl],
-    style: [stl],
+    style: [styles],
     children: mapElements(childrenItems, args),
     ...userElProps,
   };
@@ -63,4 +63,3 @@ export const DynView = (props: Tprops) => {
   // ---------- set Render
   return <>{condRender && <View {...allProps} />}</>;
 };
-
