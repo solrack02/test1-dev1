@@ -68,18 +68,17 @@ function Screen3Render({ pass }: Tprops) {
   // ---------- set Render
   if (!sttTypeFunc) return null;
 
-  return <></>;
-  // return sttTypeFunc === 'on press' ? (
-  //   <Pressable
-  //     style={stl}
-  //     onPress={async () => {
-  //       console.log('Clicou', sttPressFuncs);
-  //       for (const currFunc of sttPressFuncs) await currFunc();
-  //     }}
-  //   >
-  //     {mapElements(screenElements, args)}
-  //   </Pressable>
-  // ) : (
-  //   <View style={stl}>{mapElements(screenElements, args)}</View>
-  // );
+  return sttTypeFunc === 'on press' ? (
+    <Pressable
+      style={stl}
+      onPress={async () => {
+        console.log('Clicou', sttPressFuncs);
+        for (const currFunc of sttPressFuncs) await currFunc();
+      }}
+    >
+      {mapElements(screenElements, args)}
+    </Pressable>
+  ) : (
+    <View style={stl}>{mapElements(screenElements, args)}</View>
+  );
 }
