@@ -29,9 +29,8 @@
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"home",
 
-          styles:[jsvals.j8({pass: {
-          propertieValues: "{ backgroundColor: "red", flex: 1 }"
-        }})],
+          styles:[
+        { backgroundColor: "red", flex: 1 },, { backgroundColor: "green" }],
 
           screenElements:[() => {
                   const textStyle = {
