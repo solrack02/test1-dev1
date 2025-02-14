@@ -408,7 +408,7 @@
           "en": "Makes a view in the screen"
         },
         "capsCodeTypes": ["Elemento de Tela", "DynView"],
-        "capsCodeText": "\n\n (...args:any) => <Elements.DynView pass={{\n elementsProperties:[!#!0!#!],\n\n styles:[!#!1!#!],\n\n functions:[!#!2!#!],\n\n ,\n\n childrenItems:[!#!3!#!],\n\n args,\n }}/> \n",
+        "capsCodeText": "\n\n          (...args:any) => <Elements.DynView pass={{\n            elementsProperties:[!#!0!#!],\n\n            styles:[!#!1!#!],\n\n            functions:[!#!2!#!],            childrenItems:[!#!3!#!],\n\n            args,\n          }}/>\n        ",
         "capsCodeInputs": {
           "ccc_dynView-0": {
             "capsIptCodeID": "ccc_dynView-0",
