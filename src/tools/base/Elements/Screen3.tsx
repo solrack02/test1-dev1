@@ -19,13 +19,16 @@ type Tprops = {
 };
 
 export const processFunctions = async (arr: any[]) => {
+  const defaultVal = { trigger: '', arrFunctions: [] };
+
   for (const fn of arr) {
     if (typeof fn === 'function') {
       const result = await fn();
-      return result || { trigger: '', arrFunctions: [] };
+      return result || defaultVal;
     }
   }
-  return { trigger: '', arrFunctions: [] };
+
+  return defaultVal;
 };
 
 // Screen3 (newBase)
@@ -40,9 +43,9 @@ export const Screen3 = ({ pass }: Tprops) => {
 function Screen3Render({ pass }: Tprops) {
   const { styles, screenElements, functions, args } = pass;
   const [sttTypeFunc, setTypeFunc] = useState('');
-  const [sttPressFuncs, setPressFuncs] = useState<Array<() => Promise<void>>>(
-    [],
-  );
+  const [sttPressFuncs, setPressFuncs] = useState<
+    Array<(args: any) => Promise<void>>
+  >([]);
 
   const callFn = async () => {
     const { trigger, arrFunctions } = await processFunctions(functions);
@@ -51,7 +54,7 @@ function Screen3Render({ pass }: Tprops) {
 
     // ------- set Init Functions (Capsules)
     if (trigger === 'on init') {
-      for (const currFunc of arrFunctions) await currFunc();
+      for (const currFunc of arrFunctions) await currFunc(args);
     }
   };
 
@@ -69,8 +72,7 @@ function Screen3Render({ pass }: Tprops) {
 
   if (sttTypeFunc === 'on press') {
     const onPressFunc = async () => {
-      console.log('Clicou', sttPressFuncs);
-      for (const currFunc of sttPressFuncs) await currFunc();
+      for (const currFunc of sttPressFuncs) await currFunc(args);
     };
     return (
       <Pressable style={stl} onPress={onPressFunc}>
