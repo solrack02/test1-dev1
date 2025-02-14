@@ -761,7 +761,7 @@
           "en": ""
         },
         "capsCodeTypes": ["varValue"],
-        "capsCodeText": "'!#!property name!#!': !#!properties values!#!}})",
+        "capsCodeText": "'!#!property name!#!': !#!properties values!#!",
         "capsCodeInputs": {
           "ccc_propValue-0": {
             "capsIptRemoved": false,
