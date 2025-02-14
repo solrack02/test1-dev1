@@ -39,7 +39,7 @@ export const Screen3 = ({ pass }: Tprops) => {
 
 function Screen3Render({ pass }: Tprops) {
   const { styles, screenElements, functions, args } = pass;
-  const [sttTypeFunc, setTypeFunc] = useState('');
+  const [sttTypeFunc, setTypeFunc] = useState('on init');
   const [sttPressFuncs, setPressFuncs] = useState<Array<() => Promise<void>>>(
     [],
   );
