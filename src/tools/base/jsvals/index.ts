@@ -78,8 +78,9 @@ type Tprops_j8 = {
   pass: { propertieValues: any };
 };
 export const j8 = (props: Tprops_j8) => {
+  console.log('CONSOLEJ8', props);
   const { propertieValues } = props.pass;
-
+  console.log('CONSOLEJ8', propertieValues);
   const nativeDevices = Platform.OS !== 'web';
   const isAString = typeof propertieValues === 'string';
   const checkValues = isAString && propertieValues?.includes('px');
@@ -88,6 +89,7 @@ export const j8 = (props: Tprops_j8) => {
     return parseInt(propertieValues.replace(/D/g, ''), 10);
   }
 
+  console.log('CONSOLEJ8', propertieValues);
   return propertieValues;
 };
 
@@ -110,4 +112,3 @@ export const j12 = (props: Tprops_j12) => {
 
   return varToToggle;
 };
-
