@@ -1,5 +1,5 @@
 {
-    "sss_dirSystem": {
+  "sss_dirSystem": {
     "capsCodeInfo": {
       "1": {
         "capsLabel": { "pt-br": "dirSystem", "en": "dirSystem" },
@@ -531,5 +531,5 @@
       },
       "capsUserID": "xxx1"
     }
-  },
+  }
 }
