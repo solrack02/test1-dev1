@@ -48,7 +48,11 @@
                     </RN.Text>);
                 }],
 
-          functions:[()=>{}],
+          functions:[async (...args) =>
+ functions.funcGroup({ args, pass:{
+ arrFunctions: [()=>{}]
+ , trigger: [on press]
+}})],
 
           args,
         }}/>, 
