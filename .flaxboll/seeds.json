@@ -378,7 +378,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "()=>{}",
-              "capsIptCapsTypesToAdd": ["function"]
+              "capsIptCapsTypesToAdd": ["trigger"]
             }
           }
         }
@@ -711,8 +711,8 @@
     "capsCodeInfo": {
       "1": {
         "capsLabel": {
-          "pt-br": "func Group",
-          "en": "func Group"
+          "pt-br": "Gatilho",
+          "en": "Trigger"
         },
         "capsVersionCreatedAt": {
           "seconds": 1669821908,
@@ -741,7 +741,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "()=>{}",
-              "capsIptCapsTypesToAdd": ["function"]
+              "capsIptCapsTypesToAdd": ["trigger"]
             }
           },
           "ccc_funcGroup-1": {
@@ -753,7 +753,7 @@
                 "pt-br": "Valores possíveis: 'on press', 'on init'.",
                 "en": "Possible values: 'on press', 'on init'."
               },
-              "capsIptTxtDfValue": "on press",
+              "capsIptTxtDfValue": "on init",
               "capsIptTxtLabel": {
                 "pt-br": "Gatilho",
                 "en": "Trigger"
