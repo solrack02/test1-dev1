@@ -24,6 +24,7 @@ type Tprops = {
 
 // DynView / BOX
 export const DynView = (props: Tprops) => {
+  console.log('BOX', { props });
   // ---------- set Props
   const { elementsProperties, variablePath, styles } = props.pass;
   const { expectedVal, childrenItems, args } = props.pass;
