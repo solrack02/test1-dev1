@@ -74,7 +74,7 @@
           ],
 
           arrStyles: [
-            { color: 'black', fontSize: 12, }
+            { color: "red" }
           ],
 
           children: [
