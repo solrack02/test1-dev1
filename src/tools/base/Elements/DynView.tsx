@@ -1,10 +1,10 @@
 
 // ---------- import Packs
 import React, { useEffect, useState } from 'react';
-import { Pressable, View } from 'react-native';
+import { Pressable, ScrollView, View } from 'react-native';
 
 // ---------- import Local Tools
-import { argSel, getStlValues, mapElements, pathSel } from '../project';
+import { getStlValues, mapElements } from '../project';
 import { useData } from '../../..';
 
 export const css =
@@ -76,14 +76,19 @@ export const DynView = (props: Tprops) => {
 
   const allProps = {
     style: stl,
-    children: mapElements(childrenItems, args),
     ...userElProps,
   };
 
   // ---------- set Render
-  if (!sttTypeFunc) return <View {...allProps} />;
+  if (!sttTypeFunc)
+    return (
+      <View {...allProps}>
+        <ScrollView>mapElements(childrenItems, args)</ScrollView>
+      </View>
+    );
 
   if (sttTypeFunc === 'on press') {
+    allProps.children = mapElements(childrenItems, args);
     allProps.onPress = async () => {
       for (const currFunc of sttPressFuncs) await currFunc(args);
     };
@@ -91,5 +96,10 @@ export const DynView = (props: Tprops) => {
     return <Pressable {...allProps} />;
   }
 
-  if (sttTypeFunc === 'on init') return <View {...allProps} />;
+  if (sttTypeFunc === 'on init')
+    return (
+      <View {...allProps}>
+        <ScrollView>mapElements(childrenItems, args)</ScrollView>
+      </View>
+    );
 };
