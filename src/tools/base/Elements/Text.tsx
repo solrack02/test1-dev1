@@ -2,6 +2,7 @@
 // ---------- import Packs
 import React from 'react';
 import { Text as RNText } from 'react-native';
+import { useData } from '../../..';
 
 type Tprops = {
   pass: { arrProps: any; arrStyles: any; children: any; args?: any };
@@ -11,6 +12,9 @@ export const Text = (props: Tprops) => {
   // ---------- set Capsules Inputs
   const { arrProps, arrStyles, args } = props.pass;
   let { children } = props.pass;
+
+  const testeData = useData(ct => ct.all);
+  console.log({ testeData });
 
   if (typeof children === 'object') {
     const newMap = children.map((item, idx) => {
