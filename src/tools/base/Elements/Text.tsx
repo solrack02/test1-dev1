@@ -13,7 +13,7 @@ export const Text = (props: Tprops) => {
   const { arrProps, arrStyles, args } = props.pass;
   let { children } = props.pass;
 
-  const testeData = useData(ct => ct.all);
+  const testeData = useData(ct => ct);
   console.log({ testeData });
 
   if (typeof children === 'object') {
