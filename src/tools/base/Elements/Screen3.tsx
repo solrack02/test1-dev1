@@ -18,6 +18,16 @@ type Tprops = {
   };
 };
 
+export const processFunctions = async (arr: any[]) => {
+  for (const fn of arr) {
+    if (typeof fn === 'function') {
+      const result = await fn();
+      return result || { trigger: '', arrFunctions: [] };
+    }
+  }
+  return { trigger: '', arrFunctions: [] };
+};
+
 // Screen3 (newBase)
 export const Screen3 = ({ pass }: Tprops) => {
   const { pathScreen } = pass;
@@ -34,20 +44,20 @@ function Screen3Render({ pass }: Tprops) {
     [],
   );
 
+  const callFn = async () => {
+    const { trigger, arrFunctions } = await processFunctions(functions);
+    setTypeFunc(trigger);
+    setPressFuncs(arrFunctions);
+
+    console.log('ON INIT >>>>>');
+    // if (trigger === 'on init') {
+    //   for (const currFunc of arrFunctions) await currFunc();
+    // }
+  };
+
   useEffect(() => {
-    const callFn = async () => {
-      const { trigger, arrFunctions } = await processFunctions(functions);
-      setTypeFunc(trigger);
-      setPressFuncs(arrFunctions);
-
-      console.log('ON INIT >>>>>');
-      // if (trigger === 'on init') {
-      //   for (const currFunc of arrFunctions) await currFunc();
-      // }
-    };
-
-    console.log('dentro EFFECT', sttTypeFunc, sttPressFuncs);
     callFn();
+    console.log('dentro EFFECT', sttTypeFunc, sttPressFuncs);
   }, []);
 
   console.log('FORA EFFECT', sttTypeFunc, sttPressFuncs);
@@ -73,13 +83,3 @@ function Screen3Render({ pass }: Tprops) {
   //   <View style={stl}>{mapElements(screenElements, args)}</View>
   // );
 }
-
-export const processFunctions = async (arr: any[]) => {
-  for (const fn of arr) {
-    if (typeof fn === 'function') {
-      const result = await fn();
-      return result || { trigger: '', arrFunctions: [] };
-    }
-  }
-  return { trigger: '', arrFunctions: [] };
-};
