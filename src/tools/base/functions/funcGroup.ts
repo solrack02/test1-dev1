@@ -11,6 +11,8 @@ export const funcGroup = async (props: Tprops_funcGroup) => {
   console.log({ trigger });
 
   // ---------- set Execute Funcs
-  for (const currFunc of arrFunctions) await currFunc(args);
+  //   for (const currFunc of arrFunctions) await currFunc(args);
+
+  return { trigger, arrFunctions };
 };
 
