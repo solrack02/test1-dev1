@@ -28,6 +28,7 @@ export const Screen3 = (props: Tprops) => {
 
 function Screen3Render(props: Tprops) {
   const { styles, screenElements, functions, args } = props.pass;
+  console.log({ functions });
 
   // ---------- call Functions (If Exists)
   React.useEffect(() => {
