@@ -491,8 +491,8 @@
                 "en": ""
               },
               "capsIptCapsLabel": {
-                "pt-br": "Itens Filhos",
-                "en": "Children Items"
+                "pt-br": "Elementos",
+                "en": "Elements"
               },
               "capsIptCapsTypesToAdd": ["Elemento de Tela"],
               "capsIptCapsDfCode": "() =><></>"
