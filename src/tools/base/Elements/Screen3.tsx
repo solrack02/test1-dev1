@@ -28,7 +28,7 @@ export const Screen3 = (props: Tprops) => {
 
 function Screen3Render(props: Tprops) {
   const { styles, screenElements, functions, args } = props.pass;
-  const [sttTypeFunc, setTypeFunc] = React.useState('on press');
+  const [sttTypeFunc, setTypeFunc] = React.useState('');
   const [sttPressFuncs, setPressFuncs] = React.useState([async () => {}]);
 
   // ---------- call Functions (If Exists)
@@ -53,7 +53,9 @@ function Screen3Render(props: Tprops) {
   const stl = getStlValues(styles);
 
   // ---------- set Render
-  return sttTypeFunc === 'on press' ? (
+  return sttTypeFunc === '' ? (
+    <></>
+  ) : sttTypeFunc === 'on press' ? (
     <Pressable
       style={[stl]}
       onPress={async () => {
