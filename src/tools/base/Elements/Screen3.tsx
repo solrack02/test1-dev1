@@ -42,7 +42,9 @@ function Screen3Render(props: Tprops) {
         console.log('ON INIT >>>>>');
         for (const currFunc of arrFunctions) await currFunc();
       }
+
       console.log({ sttTypeFunc });
+      console.log({ sttPressFuncs });
     };
 
     callFn().catch(err => console.log({ err }));
