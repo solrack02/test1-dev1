@@ -34,12 +34,8 @@ function Screen3Render(props: Tprops) {
   // ---------- call Functions (If Exists)
   React.useEffect(() => {
     const callFn = async () => {
-      const processFunctions = async arr => {
-        for (const fn of arr) {
-          if (typeof fn === 'function') return await fn();
-        }
-      };
       const { trigger, arrFunctions } = await processFunctions(functions);
+      console.log({ trigger });
       setTypeFunc(trigger);
 
       if (trigger === 'on press') setPressFuncs(arrFunctions);
@@ -70,3 +66,9 @@ function Screen3Render(props: Tprops) {
     <View style={[stl]}>{mapElements(screenElements, args)}</View>
   );
 }
+
+export const processFunctions = async arr => {
+  for (const fn of arr) {
+    if (typeof fn === 'function') return await fn();
+  }
+};
