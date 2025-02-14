@@ -48,12 +48,7 @@
                     </RN.Text>);
                 }],
 
-          startFunctions:[
-        (...args) => {
-          // ---------- get Function from A_Project Scope
-          return tools.goTo("sc2");
-        }
-        ],
+          functions:[()=>{}],
 
           args,
         }}/>, 
@@ -78,7 +73,7 @@
                     </RN.Text>);
                 }],
 
-          startFunctions:[()=>{}],
+          functions:[()=>{}],
 
           args,
         }}/>
