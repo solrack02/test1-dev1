@@ -51,7 +51,7 @@
           functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
  arrFunctions: [()=>{}]
- , trigger: [on press]
+ , trigger: 'on press'
 }})],
 
           args,
