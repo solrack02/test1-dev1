@@ -47,7 +47,7 @@ function Screen3Render(props: Tprops) {
     };
 
     callFn().catch(err => console.log({ err }));
-  }, []);
+  }, [sttTypeFunc]);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
