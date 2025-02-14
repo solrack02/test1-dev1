@@ -35,10 +35,10 @@
 
           screenElements:[
 
- (...args:any) => <Elements.DynView pass={{
- elementsProperties:[{}],
+          (...args:any) => <Elements.DynView pass={{
+            elementsProperties:[{}],
 
- styles:[
+            styles:[
               {
                 backgroundColor: 'white',
                 justifyContent: 'center',
@@ -47,15 +47,11 @@
               }
               ],
 
- functions:[()=>{}],
+            functions:[()=>{}],            childrenItems:[() =><></>],
 
- ,
-
- childrenItems:[() =><></>],
-
- args,
- }}/> 
-],
+            args,
+          }}/>
+        ],
 
           functions:[()=>{}],
 
