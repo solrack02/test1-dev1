@@ -51,7 +51,7 @@ function Screen3Render({ pass }: Tprops) {
     };
 
     callFn();
-  }, [sttTypeFunc, sttPressFuncs]);
+  }, [sttPressFuncs]);
 
   // ---------- set Variables Styles (If Exists)
   const stl = getStlValues(styles);
