@@ -137,8 +137,9 @@
 
           const initCt = () => (
  {
- 'all': { 'colors': { 'primary': "red" } 
- } 
+ 'all': { 
+'colors': { 'primary': "red" } 
+, 'list1': [ {"name": "carlos"} ] } 
  
 } 
  );
