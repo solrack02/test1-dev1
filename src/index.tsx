@@ -135,10 +135,11 @@
         }}/>
           ];
 
-          const initCt = () => ({
-            {'all': {}} 
-
-          });
+          const initCt = () => (
+ {'all': {'colors': {}} 
+} 
+ 
+ );
           const initObj = initCt();
           // console.log(initObj);
 
