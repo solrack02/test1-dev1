@@ -31,15 +31,15 @@
           pathScreen:"sc1",
 
           styles:[
-        { backgroundColor: $var_all.colors.secondary, flex: 1 }, { backgroundColor: "green", alignItems: "center", justifyContent: "center" }],
+        '{ backgroundColor: $var_all.colors.primary, flex: 1 }', '{ backgroundColor: "green", alignItems: "center", justifyContent: "center" }'],
 
           screenElements:[
         
 
           (...args:any) => <Elements.DynView pass={{
-            elementsProperties:[{ disabled: true }],
+            elementsProperties:['{ disabled: true }'],
 
-            styles:[{ width: 50, height: 50, backgroundColor: "black" }],
+            styles:['{ width: 50, height: 50, backgroundColor: "black" }'],
 
             functions:[async (...args) =>
  functions.funcGroup({ args, pass:{
@@ -60,14 +60,14 @@
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:[{}],
 
-            styles:[{ width: '100%', height: 250, backgroundColor: "red" }],
+            styles:['{ width: '100%', height: 250, backgroundColor: "red" }'],
 
             functions:[()=>{}],            childrenItems:[
 
           (...args:any) => <Elements.DynView pass={{
             elementsProperties:[{}],
 
-            styles:[{ width: 20, height: 400, backgroundColor: "grey" }],
+            styles:['{ width: 20, height: 400, backgroundColor: "grey" }'],
 
             functions:[()=>{}],            childrenItems:[(...args:any) => <Elements.Text pass={{
           arrProps: [
@@ -75,11 +75,11 @@
           ],
 
           arrStyles: [
-            { color: "darkgreen" }
+            '{ color: "darkgreen" }'
           ],
 
           children: [
-            'carlos'
+            ''carlos''
           ],
 
           args,
@@ -95,11 +95,11 @@
         , 
 
     (...args:any) => <Elements.ImageBox pass={{
-      elementsProperties:[{ resizeMode: "contain" }],
+      elementsProperties:['{ resizeMode: "contain" }'],
 
-      styles:[{ width: '100%', height: 100 }],
+      styles:['{ width: '100%', height: 100 }'],
 
-      URIvariablePath:['https://images.unsplash.com/photo-1739193704276-01d202eed179?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'],
+      URIvariablePath:[''https://images.unsplash.com/photo-1739193704276-01d202eed179?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D''],
 
       args,
     }}/>],
@@ -112,7 +112,7 @@
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"sc2",
 
-          styles:[{ backgroundColor: "red", flex: 1}],
+          styles:['{ backgroundColor: "red", flex: 1}'],
 
           screenElements:[() => {
                   const textStyle = {
