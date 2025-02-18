@@ -136,7 +136,11 @@
           ];
 
           const initCt = () => ({
-            'all': "red" 
+            'all': 'colors': 
+'primary': red 
+, 'secondary': blue 
+ 
+ 
 
           });
           const initObj = initCt();
