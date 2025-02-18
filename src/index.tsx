@@ -137,7 +137,7 @@
 
           const initCt = () => ({
             'all': 'colors': 
-'primary': red 
+'primary': "red" 
 , 'secondary': "blue" 
  
  
