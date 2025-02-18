@@ -333,7 +333,7 @@
             "capsIptRemoved": false,
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
-              "capsIptCapsTypesToAdd": ["free value"],
+              "capsIptCapsTypesToAdd": ["free value", "string process"],
               "capsIptCapsLabel": {
                 "pt-br": "Estilos",
                 "en": "Styles"
@@ -443,7 +443,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "\n              {\n                backgroundColor: 'white',\n                justifyContent: 'center',\n                minHeight: 22,\n                width: \"100%\",\n              }\n              ",
-              "capsIptCapsTypesToAdd": ["free value"]
+              "capsIptCapsTypesToAdd": ["free value", "string process"]
             }
           },
 
@@ -516,7 +516,7 @@
           "en": "A React component for displaying different types of images"
         },
         "capsCodeTypes": ["Elemento de Tela", "Image"],
-        "capsCodeText": "\n\n    (...args:any) => <Elements.ImageBox pass={{\n      elementsProperties:[!#!1!#!],\n\n      styles:[!#!2!#!],\n\n      URIvariablePath:[!#!3!#!],\n\n      args,\n    }}/>",
+        "capsCodeText": "\n\n    (...args:any) => <Elements.ImageBox pass={{\n      elementsProperties:[!#!1!#!],\n\n      styles:[!#!2!#!],\n\n      URIvariablePath:['!#!3!#!'],\n\n      args,\n    }}/>",
         "capsCodeInputs": {
           "ccc_image-0": {
             "capsIptCodeID": "ccc_image-0",
