@@ -46,6 +46,7 @@ export const getStlValues = (arrGetValues: any) => {
     // return result;
   });
 
+  console.log('GET_VAR_VALUES', { allStls });
+
   return allStls;
 };
-
