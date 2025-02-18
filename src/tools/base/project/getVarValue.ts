@@ -13,10 +13,10 @@ export const getVarValue = (
   const checkString = typeof path !== 'string';
   if (checkString) return [false, null];
 
-  const condBool = path.includes('{{') && path.includes('}}');
+  const condBool = path.includes('$var_');
   if (!condBool) return [false, null];
 
-  const varPath = path.replace('{{', '').replace('}}', '');
+  const varPath = path.replace('$var_', '');
   if (setGet === 'noComponent') {
     const varValue = getCtData(varPath);
     console.log('dentro getCtData', { varValue });
