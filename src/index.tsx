@@ -31,7 +31,7 @@
           pathScreen:"sc1",
 
           styles:[
-        { backgroundColor: "red", flex: 1 },, { backgroundColor: "green", alignItems: "center", justifyContent: "center" }],
+        { backgroundColor: "red", flex: 1 }, { backgroundColor: "green", alignItems: "center", justifyContent: "center" }],
 
           screenElements:[
         
