@@ -9,6 +9,7 @@ import { Style, getStylesForProperty } from 'css-to-react-native';
 export const getStlValues = (arrGetValues: any) => {
   const allStls = arrGetValues.flatMap(style => {
     if (style.shadowOffset) return style;
+    console.log('GET_VAR_VALUES', { style });
 
     const possibleValues = Object.keys(style);
 
@@ -18,24 +19,29 @@ export const getStlValues = (arrGetValues: any) => {
 
       return condVal;
     };
+
     const result = possibleValues.flatMap(key => {
       const stlVal = style[key];
 
       const [condVar, varValue] = getVarValue(stlVal, 'noComponent');
+      console.log('GET_VAR_VALUES', { varValue });
 
       if (!condVar) {
         const valToPx = String(setPx(stlVal));
         const process2 = getStylesForProperty(key, valToPx);
-        // console.log({ process2 });
+        console.log('GET_VAR_VALUES', { process2 });
+
         return process2;
       }
 
       const varToPx = String(setPx(varValue));
       const process3 = getStylesForProperty(key, varToPx, true);
-      // console.log({ process3 });
+      console.log('GET_VAR_VALUES', { process3 });
+
       return process3;
     });
 
+    console.log('GET_VAR_VALUES', { result });
     return result as Style[];
     // return result;
   });
