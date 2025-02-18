@@ -137,7 +137,8 @@
 
           const initCt = () => (
  {
- 'all': { {} } 
+ 'all': { 'colors': {   } 
+ } 
  
 } 
  );
