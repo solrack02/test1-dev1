@@ -136,7 +136,11 @@
           ];
 
           const initCt = () => (
-                    {true: "true"}
+ {
+ 'all': 'colors': {} 
+ 
+ 
+} 
  );
           const initObj = initCt();
           // console.log(initObj);
