@@ -781,21 +781,20 @@
             }
           },
           "ccc_propValue-1": {
+            "capsIptRemoved": false,
             "capsIptCodeID": "ccc_propValue-1",
             "capsIptPosition": "1",
-            "capsIptRemoved": false,
-            "capsIptType": "capsules",
-            "capsIptCapsInfo": {
-              "capsIptCapsLabel": {
+            "capsIptType": "text",
+            "capsIptTxtInfo": {
+              "capsIptTxtLabel": {
                 "pt-br": "Valor",
                 "en": "Value"
               },
-              "capsIptCapsDescription": {
+              "capsIptTxtDfValue": "undefined",
+              "capsIptTxtDescription": {
                 "pt-br": "",
                 "en": ""
-              },
-              "capsIptCapsDfCode": " ",
-              "capsIptCapsTypesToAdd": ["free value"]
+              }
             }
           }
         },
