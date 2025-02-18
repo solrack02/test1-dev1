@@ -725,7 +725,7 @@
                 "pt-br": "",
                 "en": ""
               },
-              "capsIptCapsDfCode": "{}",
+              "capsIptCapsDfCode": " ",
               "capsIptCapsTypesToAdd": ["propObj", "propFree"]
             }
           }
