@@ -136,9 +136,7 @@
           ];
 
           const initCt = () => ({
-            'all': jsvals.j8({pass: {
-          propertieValues: {   }
-        }})
+            true: "true"
           });
           const initObj = initCt();
           // console.log(initObj);
