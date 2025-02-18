@@ -136,7 +136,7 @@
           ];
 
           const initCt = () => (
- true: "true" 
+                    {true: "true"}
  );
           const initObj = initCt();
           // console.log(initObj);
