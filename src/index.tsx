@@ -137,7 +137,8 @@
 
           const initCt = () => (
  {
- true: "true" 
+ 'all': { {} } 
+ 
 } 
  );
           const initObj = initCt();
