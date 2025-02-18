@@ -137,9 +137,7 @@
 
           const initCt = () => (
  {
- 'all': 'colors': {} 
- 
- 
+ true: "true" 
 } 
  );
           const initObj = initCt();
