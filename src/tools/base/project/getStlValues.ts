@@ -6,8 +6,23 @@ import { getVarValue } from './getVarValue';
 import { Style, getStylesForProperty } from 'css-to-react-native';
 
 // ----------- set Style Variable Selection
-export const getStlValues = (arrGetValues: any) => {
-  const allStls = arrGetValues.flatMap(style => {
+export const getStlValues = (arrGetValues: string[]) => {
+  console.log('GET_VAR_VALUES', { arrGetValues });
+
+  const parseObject = (str: string) => {
+    console.log('GET_VAR_VALUES', { str });
+
+    const parseObj = {};
+
+    console.log('GET_VAR_VALUES', { arrGetValues });
+
+    return parseObj;
+  };
+  console.log('GET_VAR_VALUES', { parseObject });
+  const arrStyles = arrGetValues.map(string => parseObject(string));
+  console.log('GET_VAR_VALUES', { arrStyles });
+
+  const allStls = arrStyles.flatMap(style => {
     if (style.shadowOffset) return style;
     console.log('GET_VAR_VALUES', { style });
 
