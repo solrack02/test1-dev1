@@ -157,7 +157,7 @@
           "en": ""
         },
         "capsCodeTypes": ["string value", "jsValue", "string process"],
-        "capsCodeText": "`!#!string value!#!`",
+        "capsCodeText": "'!#!string value!#!'",
         "capsCodeVersionID": "1",
         "capsCodeInputs": {
           "ccc_stringValue-0": {
@@ -333,7 +333,7 @@
             "capsIptRemoved": false,
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
-              "capsIptCapsTypesToAdd": ["string process"],
+              "capsIptCapsTypesToAdd": ["free value"],
               "capsIptCapsLabel": {
                 "pt-br": "Estilos",
                 "en": "Styles"
@@ -443,7 +443,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "\n              {\n                backgroundColor: 'white',\n                justifyContent: 'center',\n                minHeight: 22,\n                width: \"100%\",\n              }\n              ",
-              "capsIptCapsTypesToAdd": ["string process"]
+              "capsIptCapsTypesToAdd": ["free value"]
             }
           },
 
@@ -551,7 +551,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "\n              {\n                height: \"50px\",\n                width: \"80px\",\n                backgroundColor: \"#FDFDFD\",\n                borderWidth: 2,\n                borderColor: \"#EEE\"\n              }\n              ",
-              "capsIptCapsTypesToAdd": ["string process"]
+              "capsIptCapsTypesToAdd": ["free value"]
             }
           },
           "ccc_image-2": {
@@ -639,7 +639,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "{ color: 'black', fontSize: 12, }",
-              "capsIptCapsTypesToAdd": ["string process"]
+              "capsIptCapsTypesToAdd": ["free value"]
             }
           },
           "ccc_text-2": {
