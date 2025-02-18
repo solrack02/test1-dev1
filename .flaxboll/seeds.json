@@ -692,7 +692,7 @@
           "en": ""
         },
         "capsCodeTypes": ["propValue"],
-        "capsCodeText": "'!#!property name!#!': { !#!properties values!#! }\n",
+        "capsCodeText": "'!#!property name!#!': !#!properties values!#! \n",
         "capsCodeInputs": {
           "ccc_propObj-0": {
             "capsIptRemoved": false,
@@ -704,7 +704,7 @@
                 "pt-br": "Nome da propriedade",
                 "en": "Property name"
               },
-              "capsIptTxtDfValue": "no name",
+              "capsIptTxtDfValue": "no_name",
               "capsIptTxtDescription": {
                 "pt-br": "",
                 "en": ""
@@ -725,7 +725,7 @@
                 "pt-br": "",
                 "en": ""
               },
-              "capsIptCapsDfCode": " ",
+              "capsIptCapsDfCode": "{}",
               "capsIptCapsTypesToAdd": ["propValue", "varValue"]
             }
           }
