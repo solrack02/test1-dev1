@@ -692,7 +692,7 @@
           "en": ""
         },
         "capsCodeTypes": ["propObj"],
-        "capsCodeText": "'!#!property name!#!': !#!properties values!#! \n",
+        "capsCodeText": "{'!#!property name!#!': !#!properties values!#!} \n",
         "capsCodeInputs": {
           "ccc_propObj-0": {
             "capsIptRemoved": false,
