@@ -136,7 +136,7 @@
           ];
 
           const initCt = () => ({
-            'all': {} 
+            'all': "red" 
 
           });
           const initObj = initCt();
