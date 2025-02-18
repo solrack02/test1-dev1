@@ -255,7 +255,7 @@
                 "en": "Add Variables to the project."
               },
               "capsIptCapsDfCode": "true: \"true\"",
-              "capsIptCapsTypesToAdd": ["propValue"]
+              "capsIptCapsTypesToAdd": ["propObj"]
             }
           },
           "ccc_project-3": {
