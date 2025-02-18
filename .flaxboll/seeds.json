@@ -691,7 +691,7 @@
           "pt-br": "",
           "en": ""
         },
-        "capsCodeTypes": ["propValue"],
+        "capsCodeTypes": ["propObj"],
         "capsCodeText": "'!#!property name!#!': !#!properties values!#! \n",
         "capsCodeInputs": {
           "ccc_propObj-0": {
@@ -701,8 +701,8 @@
             "capsIptType": "text",
             "capsIptTxtInfo": {
               "capsIptTxtLabel": {
-                "pt-br": "Nome da propriedade",
-                "en": "Property name"
+                "pt-br": "Propriedades",
+                "en": "Properties"
               },
               "capsIptTxtDfValue": "no_name",
               "capsIptTxtDescription": {
@@ -718,15 +718,15 @@
             "capsIptType": "capsules",
             "capsIptCapsInfo": {
               "capsIptCapsLabel": {
-                "pt-br": "properties",
-                "en": "properties"
+                "pt-br": "Valor",
+                "en": "Value"
               },
               "capsIptCapsDescription": {
                 "pt-br": "",
                 "en": ""
               },
               "capsIptCapsDfCode": "{}",
-              "capsIptCapsTypesToAdd": ["propValue", "varValue", "free value"]
+              "capsIptCapsTypesToAdd": ["propObj", "free value"]
             }
           }
         },
