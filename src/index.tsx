@@ -30,7 +30,7 @@
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"sc1",
 
-          styles:[{ backgroundColor: "red", flex: 1, alignItems: "center", justifyContent: "center" }],
+          styles:[{ backgroundColor: "$var_all.colors.primary" }],
 
           screenElements:[() => {
                   const textStyle = {
@@ -88,7 +88,10 @@
 
           const initCt = () => (
  {
- true: "true" 
+ 'all': { 'colors': { 
+'primary': "black", 'secondary': "red" } 
+ } 
+ 
 } 
  );
           const initObj = initCt();
