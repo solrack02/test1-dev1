@@ -136,15 +136,7 @@
           ];
 
           const initCt = () => ({
-            
-        'all': jsvals.j8({pass: {
-          propertieValues: { 
-        'colors': "#334690", 'sizes': jsvals.j8({pass: {
-          propertieValues: { 'fonts': { size1: 12, size2: 13 } }
-        }}) }
-        }}), 'screens': jsvals.j8({pass: {
-          propertieValues: {   }
-        }})
+            true: "true"
           });
           const initObj = initCt();
           // console.log(initObj);
