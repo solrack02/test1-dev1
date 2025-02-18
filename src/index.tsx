@@ -136,7 +136,10 @@
           ];
 
           const initCt = () => (
- {'all': {'colors': {}} 
+ {'all': {'colors': 
+{'primary': "red"} 
+, {'secondary': "blue"} 
+} 
 } 
  
  );
