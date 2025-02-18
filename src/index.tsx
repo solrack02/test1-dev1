@@ -29,11 +29,7 @@
 
           const initCt = () => (
  {
- 'all': { 
-'colors': { 
-'primary': "red", 'secondary': "blue" } 
-, 'list1': [ {"name": "carlos"} ] } 
- 
+ true: "true" 
 } 
  );
           const initObj = initCt();
