@@ -726,7 +726,7 @@
                 "en": ""
               },
               "capsIptCapsDfCode": "{}",
-              "capsIptCapsTypesToAdd": ["propValue", "varValue"]
+              "capsIptCapsTypesToAdd": ["propValue", "varValue", "free value"]
             }
           }
         },
