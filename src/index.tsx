@@ -30,7 +30,7 @@
         (...args: any) => <Elements.Screen3 pass={{
           pathScreen:"sc1",
 
-          styles:[{ backgroundColor: "red", flex: 1 }],
+          styles:[{ backgroundColor: "red", flex: 1, alihnItems: "center", justifyContent: "center" }],
 
           screenElements:[() => {
                   const textStyle = {
