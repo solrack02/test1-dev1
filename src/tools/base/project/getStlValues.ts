@@ -32,12 +32,14 @@ export const getStlValues = (arrGetValues: any) => {
 
       const varToPx = String(setPx(varValue));
       const process3 = getStylesForProperty(key, varToPx, true);
-      console.log({ process3 });
+      // console.log({ process3 });
       return process3;
     });
 
     return result as Style[];
+    // return result;
   });
 
   return allStls;
 };
+

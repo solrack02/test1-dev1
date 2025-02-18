@@ -1,6 +1,6 @@
 
 // ---------- import Local Tools
-import { useData } from '../../..';
+import { useData } from '../../../';
 import { pathSel } from './pathSel';
 
 export const getCtData = (path: string) => {
@@ -8,3 +8,4 @@ export const getCtData = (path: string) => {
   const varValue = pathSel(ct, path);
   return varValue;
 };
+
