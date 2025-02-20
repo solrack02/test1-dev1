@@ -5,7 +5,7 @@ import JSON5 from 'json5';
 import { FlatList } from 'react-native';
 
 // ---------- import Local Tools
-import { mapElements, pathSel } from '../project';
+import { mapElements, pathSel, getVarValue } from '../project';
 import { useData } from '../../..';
 
 type Tprops = {
@@ -38,29 +38,14 @@ export const FlatList2 = (props: Tprops) => {
 
   for (const strObj of elementProperties) {
     const parsedObject = JSON5.parse(strObj);
-    console.log({ parsedObject });
 
-    for (const object in parsedObject) {
-      const isFnc = typeof object === 'function';
-      let newObj = {};
+    for (const keyProp in parsedObject) {
+      const valueProp = parsedObject[keyProp];
 
-      if (isFnc) {
-        console.log('IS A FUNCTION !!!!!!!!!!');
-        // console.log({ object });
-        // console.log({ newObj });
-        newObj = object();
-        userElProps = { ...userElProps, ...newObj };
-      }
+      const [hasVar, varValue] = getVarValue(valueProp);
 
-      if (!isFnc) {
-        console.log('NOT FUNCTION');
-        // console.log({ object });
-        // console.log({ newObj });
-        for (const keyProp in object) {
-          const valueProp = object[keyProp];
-          userElProps[keyProp] = valueProp;
-        }
-      }
+      if (hasVar) userElProps[keyProp] = varValue;
+      if (!hasVar) userElProps[keyProp] = valueProp;
     }
   }
 
