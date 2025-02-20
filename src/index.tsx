@@ -55,7 +55,7 @@
           }}/>
         , (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            ''
+            '{ItemSeparatorComponent: "$var_all.Comp1"}'
           ],
 
           pData: 'all.lists.lt1',
