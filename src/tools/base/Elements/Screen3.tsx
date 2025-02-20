@@ -66,7 +66,7 @@ function Screen3Render({ pass }: Tprops) {
 
   // ---------- set Variables Styles (If Exists)
   console.log('SCREEN', { elementsProperties });
-  console.log('SCREEN', { stl });
+
   const stl = getStlValues(styles);
 
   // ---------- set Render
