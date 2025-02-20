@@ -9,18 +9,16 @@ import { getVarValue } from './getVarValue';
 // ----------- set Style Variable Selection
 export const getStlValues = (arrGetValues: string[]) => {
   console.log('GET_VAR_VALUES', { arrGetValues });
+
   const replaceVarsInString = (inputStr: string) => {
     console.log('INPUT STRING:', inputStr);
 
-    return inputStr.replace(/"$var_[w.]+"/g, match => {
+    return inputStr.replace(/$var_[w.]+/g, match => {
       console.log('MATCH ENCONTRADO:', match);
 
-      // Remover as aspas antes de passar para `getVarValue`
-      const cleanedMatch = match.replace(/"/g, '');
+      const [hasVar, varValue] = getVarValue(match, 'noComponent');
 
-      const [hasVar, varValue] = getVarValue(cleanedMatch, 'noComponent');
-
-      return hasVar ? String(varValue) : match; // Mantém aspas na substituição
+      return hasVar ? String(varValue) : match; // Substitui pelo valor real, ou mantém se não encontrado
     });
   };
 
