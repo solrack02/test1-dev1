@@ -10,14 +10,18 @@ import { getVarValue } from './getVarValue';
 export const getStlValues = (arrGetValues: string[]) => {
   console.log('GET_VAR_VALUES', { arrGetValues });
   const replaceVarsInString = (inputStr: string) => {
+    console.log({ inputStr });
     return inputStr.replace(/$var_[w.]+/g, match => {
+      console.log({ match });
       const [hasVar, varValue] = getVarValue(match, 'noComponent');
       return hasVar ? String(varValue) : match; // Substitui pelo valor real, ou mantém se não encontrado
     });
   };
 
   const arrStyles = arrGetValues.map(value => {
+    console.log('ANTES DE AlTERADAS AS VARS', { value });
     value = replaceVarsInString(value);
+    console.log('DEPOIS DE AlTERADAS AS VARS', { value });
 
     // Garantir que value é uma string antes de chamar trim()
     if (typeof value !== 'string') {
