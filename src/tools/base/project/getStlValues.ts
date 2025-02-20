@@ -10,7 +10,14 @@ import { getVarValue } from './getVarValue';
 export const getStlValues = (arrGetValues: string[]) => {
   console.log('GET_VAR_VALUES', { arrGetValues });
 
-  const replaceVarsInString = (inputStr: string) => {
+  const replaceVarsInString = (inputStr: any) => {
+    if (typeof inputStr !== 'string') {
+      console.error(
+        'ERRO: `inputStr` não é uma string! Convertendo para string...',
+      );
+      inputStr = JSON.stringify(inputStr); // Converte para string se for um objeto
+    }
+
     console.log('INPUT STRING:', inputStr);
 
     return inputStr.replace(/$var_[w.]+/g, match => {
