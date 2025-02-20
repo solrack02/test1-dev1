@@ -55,7 +55,7 @@
           }}/>
         , (...args:any) => <Elements.FlatList2 pass={{
           elementProperties: [
-            {}
+            ''
           ],
 
           pData: 'all.lists.lt1',
