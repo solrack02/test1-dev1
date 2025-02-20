@@ -69,15 +69,21 @@ export const DynView = (props: Tprops) => {
 
   for (const object of elementsProperties) {
     for (const keyProp in object) {
+      console.log('BOX', { object });
+      console.log('BOX', { keyProp });
       const valueProp = object[keyProp];
       userElProps[keyProp] = valueProp;
     }
   }
 
+  console.log('BOX', { userElProps });
+
   const allProps = {
     style: stl,
     ...userElProps,
   };
+
+  console.log('BOX', { allProps });
 
   // ---------- set Render
   if (!sttTypeFunc)

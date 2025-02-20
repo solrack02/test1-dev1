@@ -13,7 +13,6 @@ type Tprops = {
     pathScreen: string;
     styles: any;
     screenElements: any;
-    elementsProperties: any;
     functions: any;
     args: any;
   };
@@ -42,8 +41,7 @@ export const Screen3 = ({ pass }: Tprops) => {
 };
 
 function Screen3Render({ pass }: Tprops) {
-  const { styles, screenElements, functions } = pass;
-  const { elementsProperties, args } = pass;
+  const { styles, screenElements, functions, args } = pass;
   const [sttTypeFunc, setTypeFunc] = useState('');
   const [sttPressFuncs, setPressFuncs] = useState<
     Array<(args: any) => Promise<void>>
@@ -65,8 +63,6 @@ function Screen3Render({ pass }: Tprops) {
   }, []);
 
   // ---------- set Variables Styles (If Exists)
-  console.log('SCREEN', { elementsProperties });
-
   const stl = getStlValues(styles);
 
   // ---------- set Render
