@@ -36,25 +36,29 @@ export const FlatList2 = (props: Tprops) => {
   // ------- set User Element Properties (If Exists)
   let userElProps = {};
 
-  const parsedObject = JSON5.parse(elementProperties);
-  for (const object of parsedObject) {
-    const isFnc = typeof object === 'function';
-    let newObj = {};
-    if (isFnc) {
-      console.log('IS A FUNCTION !!!!!!!!!!');
-      // console.log({ object });
-      // console.log({ newObj });
-      newObj = object();
-      userElProps = { ...userElProps, ...newObj };
-    }
+  for (const strObj of elementProperties) {
+    const parsedObject = JSON5.parse(strObj);
 
-    if (!isFnc) {
-      console.log('NOT FUNCTION');
-      // console.log({ object });
-      // console.log({ newObj });
-      for (const keyProp in object) {
-        const valueProp = object[keyProp];
-        userElProps[keyProp] = valueProp;
+    for (const object of parsedObject) {
+      const isFnc = typeof object === 'function';
+      let newObj = {};
+
+      if (isFnc) {
+        console.log('IS A FUNCTION !!!!!!!!!!');
+        // console.log({ object });
+        // console.log({ newObj });
+        newObj = object();
+        userElProps = { ...userElProps, ...newObj };
+      }
+
+      if (!isFnc) {
+        console.log('NOT FUNCTION');
+        // console.log({ object });
+        // console.log({ newObj });
+        for (const keyProp in object) {
+          const valueProp = object[keyProp];
+          userElProps[keyProp] = valueProp;
+        }
       }
     }
   }
