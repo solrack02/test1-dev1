@@ -8,35 +8,20 @@ import { getVarValue } from './getVarValue';
 
 // ----------- set Style Variable Selection
 export const getStlValues = (arrGetValues: string[]) => {
-  console.log('GET_VAR_VALUES', { arrGetValues });
-
   const arrStyles = arrGetValues.map(value => {
-    console.log('ANTES DE AlTERADAS AS VARS', { value });
-
-    // Garantir que value é uma string antes de chamar trim()
     if (typeof value !== 'string') {
-      console.warn('Valor não é uma string, convertendo:', value);
-      value = JSON.stringify(value); // Converte para string se for um objeto
+      value = JSON.stringify(value);
     }
 
-    const trimmedString = value.trim(); // Agora é seguro chamar trim()
+    const trimmedString = value.trim();
 
-    // Log para depuração
-    console.log('STRING PARA JSON5:', trimmedString);
-
-    // Tenta converter a string em objeto
     const parsedObject = JSON5.parse(trimmedString);
 
-    console.log('OBJETO RESULTANTE:', parsedObject);
-
-    return parsedObject; // Retorna o objeto processado
+    return parsedObject;
   });
-
-  console.log('GET_VAR_VALUES', { arrStyles });
 
   const allStls = arrStyles.flatMap(style => {
     if (style.shadowOffset) return style;
-    console.log('GET_VAR_VALUES', { style });
 
     const possibleValues = Object.keys(style);
 
@@ -51,29 +36,22 @@ export const getStlValues = (arrGetValues: string[]) => {
       const stlVal = style[key];
 
       const [condVar, varValue] = getVarValue(stlVal, 'noComponent');
-      console.log('GET_VAR_VALUES', { varValue });
 
       if (!condVar) {
         const valToPx = String(setPx(stlVal));
         const process2 = getStylesForProperty(key, valToPx);
-        console.log('GET_VAR_VALUES', { process2 });
 
         return process2;
       }
 
       const varToPx = String(setPx(varValue));
       const process3 = getStylesForProperty(key, varToPx, true);
-      console.log('GET_VAR_VALUES', { process3 });
 
       return process3;
     });
 
-    console.log('GET_VAR_VALUES', { result });
     return result as Style[];
-    // return result;
   });
-
-  console.log('GET_VAR_VALUES', { allStls });
 
   return allStls;
 };
