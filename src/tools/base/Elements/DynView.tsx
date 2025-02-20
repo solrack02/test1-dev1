@@ -69,10 +69,13 @@ export const DynView = (props: Tprops) => {
   const userElProps: any = {};
 
   for (const strObj of elementsProperties) {
+    console.log('BOX', { strObj });
+
     const parsedObject = JSON5.parse(strObj);
 
+    console.log('BOX', { parsedObject });
+
     for (const keyProp in parsedObject) {
-      console.log('BOX', { strObj });
       console.log('BOX', { keyProp });
       const valueProp = strObj[keyProp];
       userElProps[keyProp] = valueProp;
