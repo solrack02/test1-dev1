@@ -10,12 +10,17 @@ import { getVarValue } from './getVarValue';
 export const getStlValues = (arrGetValues: string[]) => {
   console.log('GET_VAR_VALUES', { arrGetValues });
 
-  const arrStyles = arrGetValues.map(string => {
+  const arrStyles = arrGetValues.map(value => {
     try {
-      // Removendo espaços em branco desnecessários
-      const trimmedString = string.trim();
+      // Garantir que value é uma string antes de chamar trim()
+      if (typeof value !== 'string') {
+        console.warn('Valor não é uma string, convertendo:', value);
+        value = JSON.stringify(value); // Converte para string se for um objeto
+      }
 
-      // Log para ver a string antes de processar
+      const trimmedString = value.trim(); // Agora é seguro chamar trim()
+
+      // Log para depuração
       console.log('STRING PARA JSON5:', trimmedString);
 
       // Tenta converter a string em objeto
@@ -25,8 +30,8 @@ export const getStlValues = (arrGetValues: string[]) => {
 
       return parsedObject; // Retorna o objeto processado
     } catch (error) {
-      console.error('Erro ao parsear JSON5:', error);
-      return {}; // Retorna um objeto vazio em caso de erro para evitar que o código quebre
+      console.error('Erro ao parsear JSON5:', error, 'Valor recebido:', value);
+      return {}; // Retorna um objeto vazio em caso de erro
     }
   });
 
