@@ -9,15 +9,10 @@ import { Style, getStylesForProperty } from 'css-to-react-native';
 export const getStlValues = (arrGetValues: string[]) => {
   console.log('GET_VAR_VALUES', { arrGetValues });
 
-  const parseObject = (argStr: any) => {
-    const parseObj = JSON.parse(argStr);
-
-    console.log('GET_VAR_VALUES', { arrGetValues });
-
-    return parseObj;
-  };
-  //   console.log('GET_VAR_VALUES', { parseObject });
-  const arrStyles = arrGetValues.map(string => parseObject(string));
+  const arrStyles = arrGetValues.map(string => {
+    console.log({ string });
+    return { aa: '' };
+  });
   console.log('GET_VAR_VALUES', { arrStyles });
 
   const allStls = arrStyles.flatMap(style => {
