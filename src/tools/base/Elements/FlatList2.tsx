@@ -22,7 +22,8 @@ export const FlatList2 = (props: Tprops) => {
   const { elementProperties, pData, itemElements, args } = props.pass;
 
   // ---------- set Data Listener
-  // console.log({ pData });
+  console.log({ elementProperties });
+
   let watchData = '';
   if (typeof pData === 'string') watchData = useData(ct => pathSel(ct, pData));
   // console.log({ watchData });
@@ -38,7 +39,7 @@ export const FlatList2 = (props: Tprops) => {
     const isFnc = typeof object === 'function';
     let newObj = {};
     if (isFnc) {
-      // console.log('IS A FUNCTION !!!!!!!!!!');
+      console.log('IS A FUNCTION !!!!!!!!!!');
       // console.log({ object });
       // console.log({ newObj });
       newObj = object();
@@ -46,7 +47,7 @@ export const FlatList2 = (props: Tprops) => {
     }
 
     if (!isFnc) {
-      // console.log('NOT FUNCTION');
+      console.log('NOT FUNCTION');
       // console.log({ object });
       // console.log({ newObj });
       for (const keyProp in object) {
@@ -65,9 +66,8 @@ export const FlatList2 = (props: Tprops) => {
 
   // console.log({ elementProperties, allProps });
 
-console.log({ allProps });
+  console.log({ allProps });
 
   // ------- set Render
   return <FlatList {...allProps} />;
 };
-
