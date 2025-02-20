@@ -98,7 +98,7 @@
  'all': { 
 'colors': { 
 'primary': "black", 'secondary': "red" } 
-, 'cond1': true } 
+, 'cond1': false } 
  
 } 
  );
