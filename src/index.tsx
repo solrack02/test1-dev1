@@ -100,7 +100,7 @@
 'primary': "black", 'secondary': "red" } 
 , 
 'cond1': false, 
-'func1': (nativeEvent)=>console.log(nativeEvent), 'Comp1': ()=><></> } 
+'func1': (nativeEvent)=>console.log(nativeEvent), 'Comp1': ()=><RN.Text>oi</RN.Text> } 
  
 } 
  );
