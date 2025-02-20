@@ -1,5 +1,6 @@
 
 // ---------- import Packs
+import JSON5 from 'json5';
 import React, { useEffect, useState } from 'react';
 import { Pressable, ScrollView, View } from 'react-native';
 
@@ -67,11 +68,13 @@ export const DynView = (props: Tprops) => {
   // ------- set User Element Properties (If Exists)
   const userElProps: any = {};
 
-  for (const object of elementsProperties) {
-    for (const keyProp in object) {
-      console.log('BOX', { object });
+  for (const strObj of elementsProperties) {
+    const parsedObject = JSON5.parse(strObj);
+
+    for (const keyProp in parsedObject) {
+      console.log('BOX', { strObj });
       console.log('BOX', { keyProp });
-      const valueProp = object[keyProp];
+      const valueProp = strObj[keyProp];
       userElProps[keyProp] = valueProp;
     }
   }
