@@ -680,6 +680,94 @@
     }
   },
 
+  "ccc_flatList": {
+    "capsCodeInfo": {
+      "1": {
+        "capsLabel": {
+          "pt-br": "Lista",
+          "en": "List"
+        },
+        "capsDescription": {
+          "pt-br": "Uma interface eficiente para renderizar listas simples básicas",
+          "en": "A performant interface for rendering basic, flat lists"
+        },
+        "capsCodeTypes": ["Elemento de Tela", "FlatList"],
+        "capsCodeText": "(...args:any) => <Elements.FlatList2 pass={{\n          elementProperties: [\n            !#!Element Properties!#!\n          ],\n\n          pData: !#!Path Data!#!,\n\n          itemElements: [\n            !#!Item Elements!#!\n          ],\n\n          args,\n        }}/>",
+        "capsCodeInputs": {
+          "ccc_flatList-0": {
+            "capsIptCodeID": "ccc_flatList-0",
+            "capsIptPosition": "0",
+            "capsIptRemoved": false,
+            "capsIptType": "capsules",
+            "capsIptCapsInfo": {
+              "capsIptCapsLabel": {
+                "pt-br": "Propriedades",
+                "en": "Properties"
+              },
+              "capsIptCapsDescription": {
+                "pt-br": "",
+                "en": ""
+              },
+              "capsIptCapsDfCode": "{}",
+              "capsIptCapsTypesToAdd": ["string process"]
+            }
+          },
+          "ccc_flatList-1": {
+            "capsIptCodeID": "ccc_flatList-1",
+            "capsIptPosition": "1",
+            "capsIptRemoved": false,
+            "capsIptType": "capsules",
+            "capsIptCapsInfo": {
+              "capsIptCapsLabel": {
+                "pt-br": "Dados",
+                "en": "Data"
+              },
+              "capsIptCapsDescription": {
+                "pt-br": "",
+                "en": ""
+              },
+              "capsIptCapsDfCode": "''",
+              "capsIptCapsTypesToAdd": ["string process"]
+            }
+          },
+          "ccc_flatList-2": {
+            "capsIptCodeID": "ccc_flatList-2",
+            "capsIptPosition": "2",
+            "capsIptRemoved": false,
+            "capsIptType": "capsules",
+            "capsIptCapsInfo": {
+              "capsIptCapsLabel": {
+                "pt-br": "Elementos",
+                "en": "Elements"
+              },
+              "capsIptCapsDescription": {
+                "pt-br": "",
+                "en": ""
+              },
+              "capsIptCapsDfCode": "\n              (...args) => {\n                return (\n                  <RN.Text>\n                    Adicione os campos que quer mostrar aqui.\n                  </RN.Text>\n                );\n              }\n              ",
+              "capsIptCapsTypesToAdd": ["Elemento de Tela"]
+            }
+          }
+        },
+        "capsCodeVersionID": "1",
+        "capsVersionCreatedAt": {
+          "seconds": 1669821908,
+          "nanoseconds": 764000000
+        }
+      }
+    },
+    "capsType": "code",
+    "capsDB": {
+      "capsID": "ccc_flatList",
+      "capsPrjID": "yyy1",
+      "capsCreatedAt": {
+        "seconds": 1669821908,
+        "nanoseconds": 764000000
+      },
+      "capsUserID": "xxx1"
+    }
+  },
+
   "ccc_propObj": {
     "capsCodeInfo": {
       "1": {
