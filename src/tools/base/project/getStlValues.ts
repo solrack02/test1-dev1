@@ -11,7 +11,7 @@ export const getStlValues = (arrGetValues: string[]) => {
   console.log('GET_VAR_VALUES', { arrGetValues });
   const replaceVarsInString = (inputStr: string) => {
     console.log({ inputStr });
-    return inputStr.replace(/$var_[w.]+/g, match => {
+    return inputStr.replace(/"$var_[w.]+"/g, match => {
       console.log({ match });
       const [hasVar, varValue] = getVarValue(match, 'noComponent');
       return hasVar ? String(varValue) : match; // Substitui pelo valor real, ou mantém se não encontrado
