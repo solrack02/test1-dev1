@@ -35,7 +35,7 @@
           screenElements:[
 
           (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{ disabled: true }'],
+            elementsProperties:['{ disabled: "$var_all.cond1" }'],
 
             styles:['{ backgroundColor: "$var_all.colors.primary", width: 20, height: 20 }'],
 
@@ -95,9 +95,10 @@
 
           const initCt = () => (
  {
- 'all': { 'colors': { 
+ 'all': { 
+'colors': { 
 'primary': "black", 'secondary': "red" } 
- } 
+, 'cond1': true } 
  
 } 
  );
