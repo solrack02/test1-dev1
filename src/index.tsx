@@ -58,7 +58,7 @@
             {}
           ],
 
-          pData: '',
+          pData: 'all.lists.lt1',
 
           itemElements: [
             
@@ -121,7 +121,9 @@
 'primary': "yellow", 'secondary': "red" } 
 , 
 'cond1': false, 
-'func1': (nativeEvent)=>console.log(nativeEvent), 'Comp1': <RN.Text>oi</RN.Text> } 
+'func1': (nativeEvent)=>console.log(nativeEvent), 
+'Comp1': <RN.Text>oi</RN.Text>, 'lists': { 'lt1': [{name: "carlos"}] } 
+ } 
  
 } 
  );
