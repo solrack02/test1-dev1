@@ -1,6 +1,7 @@
 
 // ---------- import Packs
 import React from 'react';
+import JSON5 from 'json5';
 import { FlatList } from 'react-native';
 
 // ---------- import Local Tools
@@ -35,7 +36,8 @@ export const FlatList2 = (props: Tprops) => {
   // ------- set User Element Properties (If Exists)
   let userElProps = {};
 
-  for (const object of elementProperties) {
+  const parsedObject = JSON5.parse(elementProperties);
+  for (const object of parsedObject) {
     const isFnc = typeof object === 'function';
     let newObj = {};
     if (isFnc) {
