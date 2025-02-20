@@ -11,9 +11,25 @@ export const getStlValues = (arrGetValues: string[]) => {
   console.log('GET_VAR_VALUES', { arrGetValues });
 
   const arrStyles = arrGetValues.map(string => {
-    console.log({ string });
-    return JSON5.parse(string);
+    try {
+      // Removendo espaços em branco desnecessários
+      const trimmedString = string.trim();
+
+      // Log para ver a string antes de processar
+      console.log('STRING PARA JSON5:', trimmedString);
+
+      // Tenta converter a string em objeto
+      const parsedObject = JSON5.parse(trimmedString);
+
+      console.log('OBJETO RESULTANTE:', parsedObject);
+
+      return parsedObject; // Retorna o objeto processado
+    } catch (error) {
+      console.error('Erro ao parsear JSON5:', error);
+      return {}; // Retorna um objeto vazio em caso de erro para evitar que o código quebre
+    }
   });
+
   console.log('GET_VAR_VALUES', { arrStyles });
 
   const allStls = arrStyles.flatMap(style => {
