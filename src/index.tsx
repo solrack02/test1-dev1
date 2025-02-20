@@ -35,7 +35,7 @@
           screenElements:[
 
           (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{ disabled: "$var_all.cond1", onHoverIn: "$var_all.cond1" }'],
+            elementsProperties:['{ disabled: "$var_all.cond1", onHoverIn: "$var_all.Comp1" }'],
 
             styles:['{ backgroundColor: "$var_all.colors.primary", width: 20, height: 20 }'],
 
@@ -98,7 +98,8 @@
  'all': { 
 'colors': { 
 'primary': "black", 'secondary': "red" } 
-, 'cond1': false } 
+, 
+'cond1': false, 'Comp1': () => console.log("oi"); } 
  
 } 
  );
