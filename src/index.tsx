@@ -35,7 +35,8 @@
           screenElements:[
 
           (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{ disabled: "$var_all.cond1" }'],
+            elementsProperties:['{ disabled: "$var_all.cond1", onHoverIn: ({ 
+ nativeEvent }) => console.log({ nativeEvent }) }'],
 
             styles:['{ backgroundColor: "$var_all.colors.primary", width: 20, height: 20 }'],
 
