@@ -77,7 +77,7 @@ export const DynView = (props: Tprops) => {
 
     for (const keyProp in parsedObject) {
       console.log('BOX', { keyProp });
-      const valueProp = strObj[keyProp];
+      const valueProp = parsedObject[keyProp];
       userElProps[keyProp] = valueProp;
     }
   }
