@@ -5,8 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { Pressable, ScrollView, View } from 'react-native';
 
 // ---------- import Local Tools
-import { getStlValues, mapElements } from '../project';
-import { useData } from '../../..';
+import { getStlValues, mapElements, getVarValue } from '../project';
 
 export const css =
   'color: lightblue; background-color: black; font-size: 11px; padding: 2px 6px; border-radius: 3px';
@@ -79,8 +78,11 @@ export const DynView = (props: Tprops) => {
       console.log('BOX', { keyProp });
       const valueProp = parsedObject[keyProp];
 
+      const [hasVar, varValue] = getVarValue(valueProp);
       console.log('BOX', { valueProp });
-      userElProps[keyProp] = valueProp;
+
+      if (hasVar) userElProps[keyProp] = varValue;
+      if (!hasVar) userElProps[keyProp] = valueProp;
     }
   }
 
