@@ -35,7 +35,7 @@
           screenElements:[
 
           (...args:any) => <Elements.DynView pass={{
-            elementsProperties:[{}],
+            elementsProperties:['{ disabled: true }'],
 
             styles:['{ backgroundColor: "$var_all.colors.primary", width: 20, height: 20 }'],
 
