@@ -1,9 +1,10 @@
 
+// ---------- import Packs
+import JSON5 from 'json5';
+import { Style, getStylesForProperty } from 'css-to-react-native';
+
 // ---------- import Local Tools
 import { getVarValue } from './getVarValue';
-
-// ---------- import Packs
-import { Style, getStylesForProperty } from 'css-to-react-native';
 
 // ----------- set Style Variable Selection
 export const getStlValues = (arrGetValues: string[]) => {
@@ -11,7 +12,7 @@ export const getStlValues = (arrGetValues: string[]) => {
 
   const arrStyles = arrGetValues.map(string => {
     console.log({ string });
-    return { aa: '' };
+    return JSON5.parse(string);
   });
   console.log('GET_VAR_VALUES', { arrStyles });
 
