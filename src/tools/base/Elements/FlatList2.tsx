@@ -38,8 +38,9 @@ export const FlatList2 = (props: Tprops) => {
 
   for (const strObj of elementProperties) {
     const parsedObject = JSON5.parse(strObj);
+    console.log({ parsedObject });
 
-    for (const object of parsedObject) {
+    for (const object in parsedObject) {
       const isFnc = typeof object === 'function';
       let newObj = {};
 
