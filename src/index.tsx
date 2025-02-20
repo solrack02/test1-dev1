@@ -35,7 +35,7 @@
           screenElements:[
 
           (...args:any) => <Elements.DynView pass={{
-            elementsProperties:['{ disabled: "$var_all.cond1", onHoverIn: "$var_all.Comp1" }'],
+            elementsProperties:['{ disabled: "$var_all.cond1", onHoverIn: "$var_all.func1", children: "$var_all.Comp1" }'],
 
             styles:['{ backgroundColor: "$var_all.colors.primary", width: 20, height: 20 }'],
 
@@ -99,7 +99,8 @@
 'colors': { 
 'primary': "black", 'secondary': "red" } 
 , 
-'cond1': false, 'Comp1': (nativeEvent)=>console.log(nativeEvent) } 
+'cond1': false, 
+'func1': (nativeEvent)=>console.log(nativeEvent), 'Comp1': ()=><></> } 
  
 } 
  );
