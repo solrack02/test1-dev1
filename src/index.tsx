@@ -122,7 +122,7 @@
 , 
 'cond1': false, 
 'func1': (nativeEvent)=>console.log(nativeEvent), 
-'Comp1': <RN.Text>oi</RN.Text>, 'lists': { 'lt1': [{name: "carlos"},{name: "juan"},{name: "leandro"}] } 
+'Comp1': <RN.Text style={{color: "darkred"}}>---</RN.Text>, 'lists': { 'lt1': [{name: "carlos"},{name: "juan"},{name: "leandro"}] } 
  } 
  
 } 
