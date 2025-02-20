@@ -79,7 +79,7 @@ export const DynView = (props: Tprops) => {
       const valueProp = parsedObject[keyProp];
 
       const [hasVar, varValue] = getVarValue(valueProp);
-      console.log('BOX', { valueProp });
+      console.log('BOX', { valueProp, varValue });
 
       if (hasVar) userElProps[keyProp] = varValue;
       if (!hasVar) userElProps[keyProp] = valueProp;
