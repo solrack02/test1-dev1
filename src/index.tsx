@@ -99,7 +99,7 @@
 'colors': { 
 'primary': "black", 'secondary': "red" } 
 , 
-'cond1': false, 'Comp1': true } 
+'cond1': false, 'Comp1': console.log } 
  
 } 
  );
