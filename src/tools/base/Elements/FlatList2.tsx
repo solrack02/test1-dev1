@@ -23,6 +23,7 @@ export const FlatList2 = (props: Tprops) => {
   const { elementProperties, pData, itemElements, args } = props.pass;
 
   // ---------- set Data Listener
+  console.log({ itemElements });
   console.log({ elementProperties });
 
   let watchData = '';
