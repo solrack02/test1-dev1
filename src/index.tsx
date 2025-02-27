@@ -85,7 +85,7 @@
           ],
 
           children: [
-            ''$arg_.name''
+            '$arg_.name'
           ],
 
           args,
