@@ -35,6 +35,7 @@ export const processFunctions = async (arr: any[]) => {
 
 // DynView / BOX
 export const DynView = (props: Tprops) => {
+  if (!props) return <></>;
   console.log('BOX', { props });
 
   const [sttTypeFunc, setTypeFunc] = useState('');
