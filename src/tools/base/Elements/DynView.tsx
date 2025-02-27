@@ -68,7 +68,10 @@ export const DynView = (props: Tprops) => {
   const userElProps: any = {};
 
   for (const strObj of elementsProperties) {
+    if (!strObj) continue;
+
     console.log('BOX', { strObj });
+
     const parsedObject = JSON5.parse(strObj);
 
     for (const keyProp in parsedObject) {
