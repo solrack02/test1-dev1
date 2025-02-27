@@ -69,6 +69,7 @@ export const DynView = (props: Tprops) => {
 
   for (const strObj of elementsProperties) {
     if (!strObj) continue;
+    if (!props) continue;
 
     console.log('BOX', { strObj });
 
