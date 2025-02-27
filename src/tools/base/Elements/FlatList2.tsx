@@ -38,6 +38,7 @@ export const FlatList2 = (props: Tprops) => {
   let userElProps = {};
 
   for (const strObj of elementProperties) {
+    console.log({ strObj });
     const parsedObject = JSON5.parse(strObj);
 
     for (const keyProp in parsedObject) {
